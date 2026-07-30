@@ -1,0 +1,235 @@
+<!DOCTYPE html><html lang="id"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Pembuatan Pupuk Organik Cair (POC) - GO Klitren</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-container": "#006e74",
+                        "on-primary-fixed": "#002112",
+                        "inverse-primary": "#76daa7",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary-fixed-variant": "#005234",
+                        "surface-tint": "#006c47",
+                        "error": "#ba1a1a",
+                        "surface-bright": "#f6fbf4",
+                        "secondary-fixed": "#76f5fe",
+                        "on-background": "#171d19",
+                        "secondary-container": "#72f2fb",
+                        "on-secondary-fixed-variant": "#004f54",
+                        "on-tertiary": "#ffffff",
+                        "primary-container": "#16875b",
+                        "tertiary-fixed-dim": "#ffb3b1",
+                        "error-container": "#ffdad6",
+                        "tertiary-fixed": "#ffdad8",
+                        "on-secondary-fixed": "#002022",
+                        "secondary": "#00696f",
+                        "on-tertiary-fixed": "#410008",
+                        "primary": "#006c46",
+                        "surface-container": "#eaefe9",
+                        "inverse-surface": "#2c322e",
+                        "primary-fixed-dim": "#76daa7",
+                        "on-primary-container": "#ffffff",
+                        "inverse-on-surface": "#edf2ec",
+                        "on-error-container": "#93000a",
+                        "surface-container-low": "#f0f5ef",
+                        "outline": "#6e7a71",
+                        "tertiary": "#9a4143",
+                        "secondary-fixed-dim": "#55d8e1",
+                        "surface": "#f6fbf4",
+                        "on-surface-variant": "#3e4942",
+                        "surface-container-high": "#e4eae3",
+                        "primary-fixed": "#92f7c2",
+                        "on-surface": "#171d19",
+                        "surface-container-highest": "#dfe4de",
+                        "tertiary-container": "#b9595a",
+                        "on-error": "#ffffff",
+                        "background": "#f6fbf4",
+                        "on-tertiary-fixed-variant": "#7c2b2e",
+                        "surface-dim": "#d6dbd5",
+                        "outline-variant": "#bdcac0",
+                        "on-secondary": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "on-tertiary-container": "#ffffff",
+                        "surface-variant": "#dfe4de"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "lg": "40px",
+                        "xl": "64px",
+                        "margin-mobile": "16px",
+                        "base": "8px",
+                        "container-max": "1200px",
+                        "xs": "4px",
+                        "md": "24px",
+                        "gutter": "24px",
+                        "sm": "12px"
+                    },
+                    "fontFamily": {
+                        "label-md": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "body-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "headline-xl": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "headline-lg-mobile": ["Inter"]
+                    },
+                    "fontSize": {
+                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "headline-xl": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "label-sm": ["12px", { "lineHeight": "16px", "fontWeight": "500" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<header class="bg-surface dark:bg-surface-container-high docked full-width top-0 shadow-sm sticky z-50" data-site-header>
+<div class="flex justify-between items-center px-margin-mobile md:px-xl py-base w-full max-w-container-max mx-auto">
+<a class="font-headline-md text-headline-md font-extrabold text-primary dark:text-primary-fixed" href="../../index.html">GO Klitren</a>
+<nav class="hidden md:flex gap-gutter" aria-label="Navigasi utama">
+<a class="text-on-surface-variant dark:text-on-surface-variant font-label-md text-label-md hover:text-primary dark:hover:text-primary-fixed transition-colors" href="../../index.html">Beranda</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant font-label-md text-label-md hover:text-primary dark:hover:text-primary-fixed transition-colors" href="../rw-13.html">RW 13</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant font-label-md text-label-md hover:text-primary dark:hover:text-primary-fixed transition-colors" href="../rw-16.html">RW 16</a>
+<a class="text-primary dark:text-primary-fixed font-bold border-b-2 border-primary font-label-md text-label-md" href="../programs.html">Program dan Materi</a>
+</nav>
+<button class="bg-primary hover:bg-primary-container text-on-primary font-label-md text-label-md py-2 px-4 rounded-lg transition-colors hidden md:block" type="button">
+                Hubungi Kami
+            </button>
+<button aria-label="Menu" class="md:hidden text-primary" type="button">
+<span class="material-symbols-outlined" aria-hidden="true">menu</span>
+</button>
+</div>
+</header>
+<main class="flex-grow w-full max-w-container-max mx-auto px-margin-mobile md:px-gutter py-xl">
+<!-- Breadcrumb -->
+<nav aria-label="Breadcrumb" class="mb-lg">
+<ol class="flex items-center space-x-sm text-label-md text-outline">
+<li class=""><a class="hover:text-primary transition-colors" href="../../index.html">Beranda</a></li>
+<li class=""><span class="material-symbols-outlined text-[16px]">chevron_right</span></li>
+<li class=""><a class="hover:text-primary transition-colors" href="../programs.html">Program dan Materi</a></li>
+<li class=""><span class="material-symbols-outlined text-[16px]">chevron_right</span></li>
+<li aria-current="page" class="text-on-surface font-semibold truncate max-w-[200px] md:max-w-md">Pembuatan Pupuk Organik Cair</li>
+</ol>
+</nav>
+<!-- Header Section -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter mb-xl items-start">
+<div class="lg:col-span-7 flex flex-col items-start gap-md">
+<a class="inline-flex items-center gap-xs text-primary font-label-md text-label-md hover:bg-surface-container rounded-full px-sm py-xs transition-colors -ml-sm" href="../programs.html">
+<span class="material-symbols-outlined text-[18px]">arrow_back</span>
+                    Kembali ke Program dan Materi
+                </a>
+<span class="inline-block bg-tertiary-container text-on-tertiary-container font-label-sm text-label-sm px-sm py-xs rounded-full uppercase tracking-wider">
+                    Panduan
+                </span>
+<h1 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface leading-tight">
+                    Pembuatan Pupuk Organik Cair (POC) dengan Memanfaatkan Limbah Organik Menggunakan Media Galon Tumpuk
+                </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+                    Media ini berisi panduan mengenai pembuatan pupuk organik cair (POC) dengan memanfaatkan limbah organik rumah tangga menggunakan media galon tumpuk. Materi meliputi alat dan bahan, tahapan pembuatan, proses fermentasi, cara pemanenan dan penggunaan POC, serta manfaatnya dalam mengurangi limbah organik, mendukung pertanian ramah lingkungan secara berkelanjutan, serta mengurangi penggunaan pupuk kimia.
+                </p>
+</div>
+<div class="lg:col-span-5 w-full aspect-video lg:aspect-square relative rounded-2xl overflow-hidden shadow-sm border-2 border-outline-variant/30">
+<img alt="Thumbnail pembuatan pupuk organik cair" class="w-full h-full object-contain object-center" src="../../thumbnail/program/thumbnail_pupuk_organik_cair.png">
+</div>
+</div>
+<!-- Materi dan Media Section -->
+<section class="mb-xl bg-surface-container-lowest rounded-2xl p-lg md:p-xl shadow-sm border border-surface-variant">
+<div class="flex flex-col md:flex-row gap-lg items-center justify-between">
+<div class="w-full md:w-1/2 space-y-md">
+<h2 class="font-headline-md text-headline-md text-on-surface">Materi dan Media</h2>
+<p class="text-on-surface-variant font-body-md text-body-md">Akses panduan lengkap langkah demi langkah pembuatan POC dengan galon tumpuk.</p>
+<div class="flex flex-wrap gap-sm">
+<a class="bg-primary text-on-primary font-label-md text-label-md px-md py-sm rounded-lg hover:bg-on-primary-fixed-variant transition-colors duration-200 inline-flex items-center gap-xs" href="https://drive.google.com/file/d/127uaRRu-tbRtW01GgATf80LsUHVPPf1Z/view?usp=sharing" rel="noopener noreferrer" target="_blank">
+                            Lihat Panduan
+                            <span class="material-symbols-outlined text-[18px]">open_in_new</span>
+</a>
+<a class="bg-surface-container-lowest text-primary border-2 border-primary font-label-md text-label-md px-md py-sm rounded-lg hover:bg-surface-container-low transition-colors duration-200 inline-flex items-center gap-xs" href="https://drive.google.com/file/d/127uaRRu-tbRtW01GgATf80LsUHVPPf1Z/view?usp=sharing" rel="noopener noreferrer" target="_blank">
+                            Unduh Materi
+                            <span class="material-symbols-outlined text-[18px]">download</span>
+</a>
+</div>
+</div>
+<a aria-label="Lihat panduan pupuk organik cair" class="w-full md:w-1/2 aspect-video bg-surface-container-high rounded-xl overflow-hidden flex items-center justify-center border border-outline-variant shadow-inner relative group cursor-pointer" href="https://drive.google.com/file/d/127uaRRu-tbRtW01GgATf80LsUHVPPf1Z/view?usp=sharing" rel="noopener noreferrer" target="_blank">
+<div class="absolute inset-0 bg-black/5 group-hover:bg-black/0 transition-colors z-10"></div>
+<span class="material-symbols-outlined text-[64px] text-outline opacity-50">description</span>
+</a>
+</div>
+</section>
+<!-- Dokumentasi Section -->
+<section class="mb-xl">
+<h2 class="font-headline-md text-headline-md text-on-surface mb-lg">Dokumentasi Kegiatan</h2>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-md">
+<!-- Doc 1 -->
+<div class="group flex flex-col gap-sm">
+<div class="aspect-square rounded-xl overflow-hidden bg-surface-container shadow-sm">
+<img alt="Community waste management" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="../../assets/images/programs/pupuk-organik-cair/dokumentasi-01-pengumpulan-limbah-organik.jpeg">
+</div>
+
+</div>
+<!-- Doc 2 Placeholder -->
+<div class="group flex flex-col gap-sm">
+<div class="aspect-square rounded-xl overflow-hidden bg-surface-container shadow-sm relative">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Close up shot of stacked plastic water gallons repurposed as a composting bin for organic liquid fertilizer. The DIY setup is placed in a small community garden with vibrant green plants around it. Bright natural sunlight, high resolution, modern eco-friendly aesthetic, Indonesian tropical setting." src="../../assets/images/programs/pupuk-organik-cair/dokumentasi-02-perakitan-galon-tumpuk.png">
+</div>
+
+</div>
+<!-- Doc 3 Placeholder -->
+<div class="group flex flex-col gap-sm">
+<div class="aspect-square rounded-xl overflow-hidden bg-surface-container shadow-sm relative">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Local community members in Indonesia pouring liquid organic fertilizer (POC) from a plastic gallon spigot into a watering can. Lush green community vegetable garden background. Warm, sunny natural daylight, highly detailed, modern community agricultural project, optimistic and sustainable vibe." src="../../assets/images/programs/pupuk-organik-cair/dokumentasi-03-pemanenan-poc.png">
+</div>
+
+</div>
+<!-- Doc 4 Placeholder -->
+<div class="group flex flex-col gap-sm">
+<div class="aspect-square rounded-xl overflow-hidden bg-surface-container shadow-sm relative">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Thriving lush green vegetable plants growing in dark rich soil in a community garden in Indonesia. The plants look healthy and well-nourished from organic fertilizer. Bright sunny day, crisp focus, vibrant natural greens, modern urban farming, sustainable lifestyle photography." src="../../assets/images/programs/pupuk-organik-cair/dokumentasi-04-hasil-pemupukan.jpeg">
+</div>
+
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest dark:bg-surface-container-low border-t border-outline-variant full-width mt-auto" data-site-footer>
+<div class="flex flex-col items-center text-center py-xl px-margin-mobile md:px-xl w-full">
+<a class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed mb-4" href="../../index.html">GO Klitren</a>
+<nav class="flex flex-wrap justify-center gap-gutter mb-6" aria-label="Navigasi footer">
+<a class="text-on-surface-variant dark:text-on-surface-variant font-label-sm text-label-sm hover:underline hover:text-secondary transition-all duration-200" href="../../index.html">Beranda</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant font-label-sm text-label-sm hover:underline hover:text-secondary transition-all duration-200" href="../rw-13.html">RW 13</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant font-label-sm text-label-sm hover:underline hover:text-secondary transition-all duration-200" href="../rw-16.html">RW 16</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant font-label-sm text-label-sm hover:underline hover:text-secondary transition-all duration-200" href="../programs.html">Program dan Materi</a>
+</nav>
+<div class="font-body-md text-body-md text-on-surface-variant">&copy; 2026 GO Klitren</div>
+</div>
+</footer>
+
+
+<script src="../../assets/js/site.js" defer></script>
+</body></html>

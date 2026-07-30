@@ -1,0 +1,286 @@
+<!DOCTYPE html><html lang="id"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Beranda - GO Klitren</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #FFFDF4; /* Warm white background as requested */
+            font-family: 'Inter', sans-serif;
+            color: #171d19; /* on-background */
+        }
+        .text-primary-green { color: #006c46; }
+        .bg-primary-green { background-color: #006c46; }
+        .text-secondary-turquoise { color: #00696f; }
+        .bg-secondary-turquoise { background-color: #00696f; }
+        .bg-sunny-yellow { background-color: #ffda00; } /* Accent placeholder if needed */
+        .bg-warm-coral { background-color: #ffb3b1; } /* Accent placeholder if needed */
+        
+        .ambient-shadow-sm { box-shadow: 0 4px 20px rgba(0, 108, 70, 0.1); }
+        .ambient-shadow-md { box-shadow: 0 8px 30px rgba(0, 108, 70, 0.15); }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-error": "#ffffff",
+                        "on-tertiary-fixed-variant": "#7c2b2e",
+                        "on-background": "#171d19",
+                        "secondary-fixed": "#76f5fe",
+                        "tertiary-fixed-dim": "#ffb3b1",
+                        "on-error-container": "#93000a",
+                        "primary": "#006c46",
+                        "on-secondary-fixed-variant": "#004f54",
+                        "surface-variant": "#dfe4de",
+                        "tertiary": "#9a4143",
+                        "on-surface": "#171d19",
+                        "surface-container-high": "#e4eae3",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-bright": "#f6fbf4",
+                        "on-tertiary-container": "#ffffff",
+                        "on-primary-container": "#ffffff",
+                        "surface-container-low": "#f0f5ef",
+                        "inverse-surface": "#2c322e",
+                        "error": "#ba1a1a",
+                        "surface-container-highest": "#dfe4de",
+                        "outline-variant": "#bdcac0",
+                        "tertiary-container": "#b9595a",
+                        "on-tertiary-fixed": "#410008",
+                        "on-primary-fixed": "#002112",
+                        "on-primary": "#ffffff",
+                        "surface-tint": "#006c47",
+                        "on-secondary-fixed": "#002022",
+                        "primary-fixed": "#92f7c2",
+                        "primary-container": "#16875b",
+                        "secondary-container": "#72f2fb",
+                        "on-primary-fixed-variant": "#005234",
+                        "on-tertiary": "#ffffff",
+                        "surface-dim": "#d6dbd5",
+                        "surface-container": "#eaefe9",
+                        "on-secondary": "#ffffff",
+                        "surface": "#f6fbf4",
+                        "on-surface-variant": "#3e4942",
+                        "inverse-on-surface": "#edf2ec",
+                        "inverse-primary": "#76daa7",
+                        "secondary": "#00696f",
+                        "outline": "#6e7a71",
+                        "on-secondary-container": "#006e74",
+                        "primary-fixed-dim": "#76daa7",
+                        "tertiary-fixed": "#ffdad8",
+                        "error-container": "#ffdad6",
+                        "secondary-fixed-dim": "#55d8e1",
+                        "background": "#f6fbf4"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    spacing: {
+                        "xs": "4px",
+                        "lg": "40px",
+                        "container-max": "1200px",
+                        "margin-mobile": "16px",
+                        "base": "8px",
+                        "xl": "64px",
+                        "gutter": "24px",
+                        "sm": "12px",
+                        "md": "24px"
+                    },
+                    fontFamily: {
+                        "headline-lg-mobile": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "body-md": ["Inter"],
+                        "label-md": ["Inter"],
+                        "headline-xl": ["Inter"],
+                        "body-lg": ["Inter"]
+                    },
+                    fontSize: {
+                        "headline-lg-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "700" }],
+                        "label-sm": ["12px", { "lineHeight": "16px", "fontWeight": "500" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }],
+                        "headline-xl": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="flex flex-col min-h-screen">
+<!-- TopNavBar -->
+<header class="bg-surface dark:bg-surface-container-high docked full-width top-0 shadow-sm sticky z-50" data-site-header>
+<div class="flex justify-between items-center px-margin-mobile md:px-xl py-base w-full max-w-container-max mx-auto">
+<a class="font-headline-md text-headline-md font-extrabold text-primary dark:text-primary-fixed" href="index.html">GO Klitren</a>
+<nav class="hidden md:flex gap-gutter" aria-label="Navigasi utama">
+<a class="text-primary dark:text-primary-fixed font-bold border-b-2 border-primary font-label-md text-label-md" href="index.html">Beranda</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant font-label-md text-label-md hover:text-primary dark:hover:text-primary-fixed transition-colors" href="pages/rw-13.html">RW 13</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant font-label-md text-label-md hover:text-primary dark:hover:text-primary-fixed transition-colors" href="pages/rw-16.html">RW 16</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant font-label-md text-label-md hover:text-primary dark:hover:text-primary-fixed transition-colors" href="pages/programs.html">Program dan Materi</a>
+</nav>
+<button class="bg-primary hover:bg-primary-container text-on-primary font-label-md text-label-md py-2 px-4 rounded-lg transition-colors hidden md:block" type="button">
+                Hubungi Kami
+            </button>
+<button aria-label="Menu" class="md:hidden text-primary" type="button">
+<span class="material-symbols-outlined" aria-hidden="true">menu</span>
+</button>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-grow w-full max-w-container-max mx-auto px-margin-mobile md:px-xl py-xl flex flex-col gap-xl">
+<!-- Hero Section -->
+<section class="flex flex-col md:flex-row items-center gap-gutter">
+<div class="flex-1 flex flex-col gap-md">
+<h1 class="font-headline-lg-mobile md:font-headline-xl text-headline-lg-mobile md:text-headline-xl text-on-surface">
+                    Kenali Lebih Dekat <span class="text-primary">RW 13</span> dan <span class="text-primary">RW 16</span> Klitren
+                </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+                    Media informasi wilayah, kegiatan warga, serta program pengabdian masyarakat di RW 13 dan RW 16 Kelurahan Klitren.
+                </p>
+<div class="flex flex-col sm:flex-row gap-sm pt-4">
+<a class="bg-primary text-on-primary px-6 py-3 rounded-lg font-label-md text-label-md text-center hover:bg-primary-container transition-colors shadow-sm" href="pages/rw-13.html">
+                        Jelajahi RW 13
+                    </a>
+<a class="bg-surface-container-lowest text-secondary border-2 border-secondary px-6 py-3 rounded-lg font-label-md text-label-md text-center hover:bg-secondary-container transition-colors shadow-sm" href="pages/rw-16.html">
+                        Jelajahi RW 16
+                    </a>
+</div>
+</div>
+<div class="flex-1 w-full relative">
+<!-- Decorative Elements -->
+<div class="absolute -top-4 -left-4 w-24 h-24 bg-tertiary-fixed-dim rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob"></div>
+<div class="absolute -bottom-8 -right-4 w-32 h-32 bg-secondary-fixed rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000"></div>
+<div class="absolute -bottom-8 left-20 w-24 h-24 bg-primary-fixed rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000"></div>
+<img alt="Kegiatan Warga Klitren" class="w-full h-auto rounded-2xl object-cover ambient-shadow-md relative z-10 border-4 border-surface-container-lowest aspect-video md:aspect-square object-center" data-alt="A vibrant, sunny morning community gathering in a clean, modern Indonesian neighborhood street. Residents of various ages are interacting warmly. Lush green plants are visible in pots. The lighting is bright and optimistic, reflecting a Modern Organic aesthetic with crisp details and a welcoming atmosphere. High quality photography." src="assets/images/site/hero-home.png">
+</div>
+</section>
+<!-- Jelajahi Wilayah Section -->
+<section class="flex flex-col gap-lg">
+<div class="flex flex-col gap-xs">
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Jelajahi Wilayah</h2>
+<div class="w-16 h-2 bg-primary rounded-full"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<!-- Card RW 13 -->
+<div class="bg-surface-container-lowest rounded-2xl p-md flex flex-col gap-md ambient-shadow-sm border border-surface-variant hover:ambient-shadow-md transition-all duration-300 group">
+<div class="flex justify-between items-start">
+<div class="w-12 h-12 rounded-full bg-primary-fixed flex items-center justify-center text-primary-container group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">home</span>
+</div>
+<span class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full font-label-sm text-label-sm">4 RT</span>
+</div>
+<div class="flex flex-col gap-2 flex-grow">
+<h3 class="font-headline-md text-headline-md text-on-surface">RW 13 Klitren</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Terdiri atas 4 RT yang aktif dalam berbagai kegiatan sosial kemasyarakatan dan pengelolaan lingkungan yang asri.</p>
+</div>
+<a class="mt-auto self-start text-primary font-label-md text-label-md flex items-center gap-2 group-hover:gap-3 transition-all" href="pages/rw-13.html">
+                        Lihat RW 13 <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+<!-- Card RW 16 -->
+<div class="bg-surface-container-lowest rounded-2xl p-md flex flex-col gap-md ambient-shadow-sm border border-surface-variant hover:ambient-shadow-md transition-all duration-300 group">
+<div class="flex justify-between items-start">
+<div class="w-12 h-12 rounded-full bg-tertiary-fixed text-tertiary flex items-center justify-center group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">location_city</span>
+</div>
+<span class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full font-label-sm text-label-sm">3 RT</span>
+</div>
+<div class="flex flex-col gap-2 flex-grow">
+<h3 class="font-headline-md text-headline-md text-on-surface">RW 16 Klitren</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Terdiri atas 3 RT dengan dinamika warga yang guyub rukun, memiliki program unggulan pemberdayaan ekonomi kreatif lokal.</p>
+</div>
+<a class="mt-auto self-start text-tertiary font-label-md text-label-md flex items-center gap-2 group-hover:gap-3 transition-all" href="pages/rw-16.html">
+                        Lihat RW 16 <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+</section>
+<!-- Full Bleed Accent Block for Visual Interest -->
+<div class="-mx-margin-mobile md:-mx-xl px-margin-mobile md:px-xl py-xl bg-surface-container-low my-8">
+<!-- Temukan Informasi Section -->
+<section class="flex flex-col gap-lg max-w-container-max mx-auto w-full">
+<div class="flex flex-col gap-xs items-center text-center">
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Temukan Informasi di GO Klitren</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xl">Pusat informasi terpadu untuk kemajuan dan kesejahteraan bersama warga Klitren.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter mt-4">
+<!-- Info Card 1 -->
+<div class="bg-surface-container-lowest rounded-2xl p-md flex flex-col items-center text-center gap-4 ambient-shadow-sm border-t-4 border-primary hover:-translate-y-1 transition-transform">
+<div class="w-16 h-16 rounded-full bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-3xl">map</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface text-xl">Informasi Wilayah</h3>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm">Data demografi, peta fasilitas umum, dan struktur organisasi kepengurusan RW.</p>
+</div>
+<!-- Info Card 2 -->
+<div class="bg-surface-container-lowest rounded-2xl p-md flex flex-col items-center text-center gap-4 ambient-shadow-sm border-t-4 border-secondary hover:-translate-y-1 transition-transform">
+<div class="w-16 h-16 rounded-full bg-surface-container flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-3xl">groups</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface text-xl">Kegiatan Warga</h3>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm">Jadwal posyandu, kerja bakti, pertemuan rutin, dan dokumentasi acara warga.</p>
+</div>
+<!-- Info Card 3 -->
+<div class="bg-surface-container-lowest rounded-2xl p-md flex flex-col items-center text-center gap-4 ambient-shadow-sm border-t-4 border-tertiary hover:-translate-y-1 transition-transform">
+<div class="w-16 h-16 rounded-full bg-surface-container flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-3xl">library_books</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface text-xl">Program dan Materi</h3>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm">Materi edukasi, modul pelatihan, dan laporan progres program pengabdian masyarakat.</p>
+</div>
+</div>
+<div class="flex justify-center mt-6">
+<a class="bg-primary text-on-primary px-8 py-3 rounded-lg font-label-md text-label-md text-center hover:bg-primary-container transition-colors shadow-sm" href="pages/programs.html">
+                        Lihat Program dan Materi
+                    </a>
+</div>
+</section>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest dark:bg-surface-container-low border-t border-outline-variant full-width mt-auto" data-site-footer>
+<div class="flex flex-col items-center text-center py-xl px-margin-mobile md:px-xl w-full">
+<a class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed mb-4" href="index.html">GO Klitren</a>
+<nav class="flex flex-wrap justify-center gap-gutter mb-6" aria-label="Navigasi footer">
+<a class="text-on-surface-variant dark:text-on-surface-variant font-label-sm text-label-sm hover:underline hover:text-secondary transition-all duration-200" href="index.html">Beranda</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant font-label-sm text-label-sm hover:underline hover:text-secondary transition-all duration-200" href="pages/rw-13.html">RW 13</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant font-label-sm text-label-sm hover:underline hover:text-secondary transition-all duration-200" href="pages/rw-16.html">RW 16</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant font-label-sm text-label-sm hover:underline hover:text-secondary transition-all duration-200" href="pages/programs.html">Program dan Materi</a>
+</nav>
+<div class="font-body-md text-body-md text-on-surface-variant">&copy; 2026 GO Klitren</div>
+</div>
+</footer>
+<style>
+        /* Simple blob animation for hero background */
+        @keyframes blob {
+            0% { transform: translate(0px, 0px) scale(1); }
+            33% { transform: translate(30px, -50px) scale(1.1); }
+            66% { transform: translate(-20px, 20px) scale(0.9); }
+            100% { transform: translate(0px, 0px) scale(1); }
+        }
+        .animate-blob {
+            animation: blob 7s infinite;
+        }
+        .animation-delay-2000 {
+            animation-delay: 2s;
+        }
+        .animation-delay-4000 {
+            animation-delay: 4s;
+        }
+    </style>
+<script src="assets/js/site.js" defer></script>
+</body></html>

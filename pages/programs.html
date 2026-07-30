@@ -1,0 +1,450 @@
+<!DOCTYPE html><html lang="id" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Program dan Materi - GO Klitren</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-error": "#ffffff",
+                        "on-tertiary-fixed-variant": "#7c2b2e",
+                        "on-background": "#171d19",
+                        "secondary-fixed": "#76f5fe",
+                        "tertiary-fixed-dim": "#ffb3b1",
+                        "on-error-container": "#93000a",
+                        "primary": "#006c46",
+                        "on-secondary-fixed-variant": "#004f54",
+                        "surface-variant": "#dfe4de",
+                        "tertiary": "#9a4143",
+                        "on-surface": "#171d19",
+                        "surface-container-high": "#e4eae3",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-bright": "#f6fbf4",
+                        "on-tertiary-container": "#ffffff",
+                        "on-primary-container": "#ffffff",
+                        "surface-container-low": "#f0f5ef",
+                        "inverse-surface": "#2c322e",
+                        "error": "#ba1a1a",
+                        "surface-container-highest": "#dfe4de",
+                        "outline-variant": "#bdcac0",
+                        "tertiary-container": "#b9595a",
+                        "on-tertiary-fixed": "#410008",
+                        "on-primary-fixed": "#002112",
+                        "on-primary": "#ffffff",
+                        "surface-tint": "#006c47",
+                        "on-secondary-fixed": "#002022",
+                        "primary-fixed": "#92f7c2",
+                        "primary-container": "#16875b",
+                        "secondary-container": "#72f2fb",
+                        "on-primary-fixed-variant": "#005234",
+                        "on-tertiary": "#ffffff",
+                        "surface-dim": "#d6dbd5",
+                        "surface-container": "#eaefe9",
+                        "on-secondary": "#ffffff",
+                        "surface": "#f6fbf4",
+                        "on-surface-variant": "#3e4942",
+                        "inverse-on-surface": "#edf2ec",
+                        "inverse-primary": "#76daa7",
+                        "secondary": "#00696f",
+                        "outline": "#6e7a71",
+                        "on-secondary-container": "#006e74",
+                        "primary-fixed-dim": "#76daa7",
+                        "tertiary-fixed": "#ffdad8",
+                        "error-container": "#ffdad6",
+                        "secondary-fixed-dim": "#55d8e1",
+                        "background": "#FFFDF4" // Warm white background override
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px",
+                        "2xl": "1rem" // Added for 16px radius
+                    },
+                    "spacing": {
+                        "xs": "4px",
+                        "lg": "40px",
+                        "container-max": "1200px",
+                        "margin-mobile": "16px",
+                        "base": "8px",
+                        "xl": "64px",
+                        "gutter": "24px",
+                        "sm": "12px",
+                        "md": "24px"
+                    },
+                    "fontFamily": {
+                        "headline-lg-mobile": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "body-md": ["Inter"],
+                        "label-md": ["Inter"],
+                        "headline-xl": ["Inter"],
+                        "body-lg": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-lg-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "700" }],
+                        "label-sm": ["12px", { "lineHeight": "16px", "fontWeight": "500" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }],
+                        "headline-xl": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        .ambient-shadow {
+            box-shadow: 0 4px 20px rgba(0, 108, 70, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md antialiased flex flex-col min-h-screen">
+<!-- TopNavBar -->
+<header class="bg-surface dark:bg-surface-container-high docked full-width top-0 shadow-sm sticky z-50" data-site-header>
+<div class="flex justify-between items-center px-margin-mobile md:px-xl py-base w-full max-w-container-max mx-auto">
+<a class="font-headline-md text-headline-md font-extrabold text-primary dark:text-primary-fixed" href="../index.html">GO Klitren</a>
+<nav class="hidden md:flex gap-gutter" aria-label="Navigasi utama">
+<a class="text-on-surface-variant dark:text-on-surface-variant font-label-md text-label-md hover:text-primary dark:hover:text-primary-fixed transition-colors" href="../index.html">Beranda</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant font-label-md text-label-md hover:text-primary dark:hover:text-primary-fixed transition-colors" href="rw-13.html">RW 13</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant font-label-md text-label-md hover:text-primary dark:hover:text-primary-fixed transition-colors" href="rw-16.html">RW 16</a>
+<a class="text-primary dark:text-primary-fixed font-bold border-b-2 border-primary font-label-md text-label-md" href="programs.html">Program dan Materi</a>
+</nav>
+<button class="bg-primary hover:bg-primary-container text-on-primary font-label-md text-label-md py-2 px-4 rounded-lg transition-colors hidden md:block" type="button">
+                Hubungi Kami
+            </button>
+<button aria-label="Menu" class="md:hidden text-primary" type="button">
+<span class="material-symbols-outlined" aria-hidden="true">menu</span>
+</button>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-grow w-full max-w-container-max mx-auto px-margin-mobile md:px-xl py-xl space-y-xl">
+<!-- Header Section -->
+<section class="relative rounded-2xl overflow-hidden glass-card ambient-shadow border border-outline-variant/30 flex flex-col md:flex-row items-center bg-surface-container-lowest">
+<div class="w-full md:w-1/2 p-md md:p-xl space-y-sm z-10 relative bg-gradient-to-r from-surface-container-lowest to-transparent">
+<h1 class="font-headline-xl text-headline-xl text-primary">Program dan Materi</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-md">Kumpulan program, materi edukasi, poster, panduan, peta, template, dan video yang disusun dalam kegiatan pengabdian masyarakat.</p>
+</div>
+<div class="w-full md:w-1/2 h-64 md:h-full absolute md:relative right-0 top-0">
+<div class="bg-cover bg-center w-full h-full min-h-[300px]" data-alt="A beautifully composed flat lay or landscape scene depicting community education materials. A modern organic aesthetic featuring crisp white paper documents, softly lit maps, and vibrant green plant elements arranged neatly on a warm cream wooden surface. Natural sunlight streams from the side, creating soft ambient shadows. The overall mood is optimistic, systematic, and neighborly, utilizing a palette of warm cream, dark primary green, and bright emerald accents." style="background-image: url('../assets/images/site/hero-program-dan-materi.png')"></div>
+<div class="absolute inset-0 bg-gradient-to-r from-surface-container-lowest via-surface-container-lowest/50 to-transparent md:hidden"></div>
+</div>
+</section>
+<!-- Search & Filter Section -->
+<section class="space-y-sm">
+<div class="flex flex-col md:flex-row gap-sm items-end">
+<div class="w-full relative">
+<label class="block font-label-sm text-label-sm text-on-surface-variant mb-xs" for="program-search">Cari Program dan Materi</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-sm text-outline">search</span>
+<input class="w-full pl-lg pr-lg py-sm bg-surface-container-lowest border border-outline-variant rounded-lg font-body-md text-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary transition-all ambient-shadow" id="program-search" placeholder="Cari berdasarkan judul, topik, atau jenis media…" type="text">
+<button class="absolute right-sm text-outline hover:text-primary hidden" id="clear-search">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+</div>
+</div>
+<div class="flex justify-between items-center text-on-surface-variant">
+<span class="font-label-sm text-label-sm" id="result-counter">Menampilkan <span id="visible-count" class="">13</span> dari 13 program</span>
+</div>
+</section>
+<!-- Empty State -->
+<section class="hidden flex-col items-center justify-center py-xl text-center space-y-md bg-surface-container-low rounded-2xl border border-dashed border-outline-variant" id="empty-state">
+<span class="material-symbols-outlined text-[64px] text-outline">search_off</span>
+<div class="space-y-xs">
+<h3 class="font-headline-md text-headline-md text-on-surface">Program tidak ditemukan</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Coba gunakan kata kunci lain atau hapus filter pencarian.</p>
+</div>
+<button class="px-md py-sm bg-primary text-on-primary font-label-md text-label-md rounded-lg hover:bg-primary-container transition-colors shadow-sm" id="reset-btn">
+                Tampilkan Semua Program
+            </button>
+</section>
+<!-- Program Grid (Bento/Masonry feel) -->
+<section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter" id="program-grid">
+<!-- Card 1: Shopee Merchant (L) -->
+<article class="program-card flex flex-col bg-surface-container-lowest rounded-2xl ambient-shadow overflow-hidden group border border-outline-variant/30 hover:border-primary/50 transition-all duration-300 transform hover:-translate-y-1" data-title="Daftar Shopee Merchant" data-topic="UMKM" data-type="Panduan">
+<div class="aspect-video w-full relative overflow-hidden bg-surface-dim">
+<img alt="Thumbnail panduan daftar Shopee Merchant" class="object-contain w-full h-full group-hover:scale-105 transition-transform duration-500" src="../thumbnail/program/thumbnail_daftar_shopee_merchant.png">
+<div class="absolute top-sm left-sm bg-secondary-container text-on-secondary-container px-2 py-1 rounded-full font-label-sm text-label-sm border border-secondary-container/50 backdrop-blur-md">Panduan</div>
+</div>
+<div class="p-md flex flex-col flex-grow">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-xs group-hover:text-primary transition-colors">Daftar Shopee Merchant</h3>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2 mb-md flex-grow">Panduan lengkap langkah demi langkah untuk mendaftarkan UMKM lokal ke platform Shopee.</p>
+<a class="inline-flex items-center font-label-md text-label-md text-primary hover:text-primary-container group/link" href="programs/daftar-shopee-merchant.html">
+                        Lihat Program <span class="material-symbols-outlined ml-1 group-hover/link:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</article>
+<!-- Card 2: Kas Sampah (L) -->
+<article class="program-card flex flex-col bg-surface-container-lowest rounded-2xl ambient-shadow overflow-hidden group border border-outline-variant/30 hover:border-primary/50 transition-all duration-300 transform hover:-translate-y-1" data-title="Administrasi Kas Sampah" data-topic="Lingkungan" data-type="Template">
+<div class="aspect-video w-full relative overflow-hidden bg-surface-dim">
+<img alt="Thumbnail administrasi kas sampah" class="object-contain w-full h-full group-hover:scale-105 transition-transform duration-500" src="../thumbnail/program/thumbnail_administrasi_kas_sampah.jpg">
+<div class="absolute top-sm left-sm bg-[#FFF59D] text-[#827717] px-2 py-1 rounded-full font-label-sm text-label-sm border border-[#FFF59D]/50 backdrop-blur-md">Template</div>
+</div>
+<div class="p-md flex flex-col flex-grow">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-xs group-hover:text-primary transition-colors">Administrasi Kas Sampah</h3>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2 mb-md flex-grow">Template pencatatan keuangan bank sampah yang terstruktur untuk transparansi kas rukun warga.</p>
+<a class="inline-flex items-center font-label-md text-label-md text-primary hover:text-primary-container group/link" href="programs/administrasi-kas-sampah.html">
+                        Lihat Program <span class="material-symbols-outlined ml-1 group-hover/link:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</article>
+<!-- Card 3: TOGA (L) -->
+<article class="program-card flex flex-col bg-surface-container-lowest rounded-2xl ambient-shadow overflow-hidden group border border-outline-variant/30 hover:border-primary/50 transition-all duration-300 transform hover:-translate-y-1" data-title="Roadmap Ekonomi TOGA" data-topic="Pemberdayaan" data-type="Roadmap">
+<div class="aspect-video w-full relative overflow-hidden bg-surface-dim">
+<img alt="Thumbnail roadmap ekonomi TOGA" class="object-contain w-full h-full group-hover:scale-105 transition-transform duration-500" src="../thumbnail/program/thumbnail_roadmap_ekonomi_toga.jpg">
+<div class="absolute top-sm left-sm bg-tertiary-container text-on-tertiary-container px-2 py-1 rounded-full font-label-sm text-label-sm border border-tertiary-container/50 backdrop-blur-md">Roadmap</div>
+</div>
+<div class="p-md flex flex-col flex-grow">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-xs group-hover:text-primary transition-colors">Roadmap Ekonomi TOGA</h3>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2 mb-md flex-grow">Tahapan pengembangan TOGA dari budidaya dan pengolahan hingga pemasaran berbasis kemitraan.</p>
+<a class="inline-flex items-center font-label-md text-label-md text-primary hover:text-primary-container group/link" href="programs/roadmap-ekonomi-toga.html">
+                        Lihat Program <span class="material-symbols-outlined ml-1 group-hover/link:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</article>
+<!-- Card 4: Monografi (L) -->
+<article class="program-card flex flex-col bg-surface-container-lowest rounded-2xl ambient-shadow overflow-hidden group border border-outline-variant/30 hover:border-primary/50 transition-all duration-300 transform hover:-translate-y-1 md:col-span-2 lg:col-span-1" data-title="Struktur Kepengurusan dan Monografi" data-topic="Pemerintahan" data-type="Dokumen">
+<div class="aspect-video w-full relative overflow-hidden bg-surface-dim">
+<img alt="Thumbnail struktur kepengurusan dan monografi" class="object-contain w-full h-full group-hover:scale-105 transition-transform duration-500" src="../thumbnail/program/thumbnail_struktur_monografi.jpg">
+<div class="absolute top-sm left-sm bg-surface-variant text-on-surface-variant px-2 py-1 rounded-full font-label-sm text-label-sm border border-surface-variant/50 backdrop-blur-md">Dokumen</div>
+</div>
+<div class="p-md flex flex-col flex-grow">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-xs group-hover:text-primary transition-colors">Struktur Kepengurusan &amp; Monografi</h3>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2 mb-md flex-grow">Kompilasi data demografi, sosial, dan ekonomi wilayah kelurahan yang disusun secara sistematis.</p>
+<a class="inline-flex items-center font-label-md text-label-md text-primary hover:text-primary-container group/link" href="programs/struktur-monografi.html">
+                        Lihat Program <span class="material-symbols-outlined ml-1 group-hover/link:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</article>
+<!-- Card 5: Peta RW 13 (L) -->
+<article class="program-card flex flex-col bg-surface-container-lowest rounded-2xl ambient-shadow overflow-hidden group border border-outline-variant/30 hover:border-primary/50 transition-all duration-300 transform hover:-translate-y-1" data-title="Peta Wilayah RW 13" data-topic="Infrastruktur" data-type="Peta">
+<div class="aspect-video w-full relative overflow-hidden bg-surface-dim">
+<img alt="Thumbnail peta wilayah RW 13" class="object-contain w-full h-full group-hover:scale-105 transition-transform duration-500" src="../thumbnail/program/thumbnail_peta_rw_13.png">
+<div class="absolute top-sm left-sm bg-primary text-on-primary px-2 py-1 rounded-full font-label-sm text-label-sm border border-primary/50 backdrop-blur-md">Peta</div>
+</div>
+<div class="p-md flex flex-col flex-grow">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-xs group-hover:text-primary transition-colors">Peta Wilayah RW 13</h3>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2 mb-md flex-grow">Pemetaan infrastruktur, fasilitas umum, dan batas administrasi rukun warga 13.</p>
+<a class="inline-flex items-center font-label-md text-label-md text-primary hover:text-primary-container group/link" href="programs/peta-wilayah-rw-13.html">
+                        Lihat Program <span class="material-symbols-outlined ml-1 group-hover/link:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</article>
+<!-- Card 6: Peta RW 16 (L) -->
+<article class="program-card flex flex-col bg-surface-container-lowest rounded-2xl ambient-shadow overflow-hidden group border border-outline-variant/30 hover:border-primary/50 transition-all duration-300 transform hover:-translate-y-1" data-title="Peta Wilayah RW 16" data-topic="Infrastruktur" data-type="Peta">
+<div class="aspect-video w-full relative overflow-hidden bg-surface-dim">
+<img alt="Thumbnail peta wilayah RW 16" class="object-contain w-full h-full group-hover:scale-105 transition-transform duration-500" src="../thumbnail/program/thumbnail_peta_rw_16.png">
+<div class="absolute top-sm left-sm bg-primary text-on-primary px-2 py-1 rounded-full font-label-sm text-label-sm border border-primary/50 backdrop-blur-md">Peta</div>
+</div>
+<div class="p-md flex flex-col flex-grow">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-xs group-hover:text-primary transition-colors">Peta Wilayah RW 16</h3>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2 mb-md flex-grow">Pemetaan tata ruang dan pemukiman untuk mendukung perencanaan pengembangan wilayah RW 16.</p>
+<a class="inline-flex items-center font-label-md text-label-md text-primary hover:text-primary-container group/link" href="programs/peta-wilayah-rw-16.html">
+                        Lihat Program <span class="material-symbols-outlined ml-1 group-hover/link:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</article>
+<!-- Card 7: Aquaponik Galon (P) - Handled with Aspect ratio utility -->
+<article class="program-card flex flex-col bg-surface-container-lowest rounded-2xl ambient-shadow overflow-hidden group border border-outline-variant/30 hover:border-primary/50 transition-all duration-300 transform hover:-translate-y-1 row-span-2 lg:col-start-1" data-title="Aquaponik Galon Bekas" data-topic="Lingkungan" data-type="Video">
+<div class="aspect-[3/4] w-full relative overflow-hidden bg-surface-dim">
+<img alt="Thumbnail aquaponik galon bekas" class="object-contain w-full h-full group-hover:scale-105 transition-transform duration-500" src="../thumbnail/program/thumbnail_aquaponik_galon_bekas.png">
+<div class="absolute top-sm left-sm bg-error-container text-on-error-container px-2 py-1 rounded-full font-label-sm text-label-sm border border-error-container/50 backdrop-blur-md flex items-center">
+<span class="material-symbols-outlined text-[14px] mr-1">play_circle</span> Video
+                    </div>
+</div>
+<div class="p-md flex flex-col flex-grow">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-xs group-hover:text-primary transition-colors">Aquaponik Galon Bekas</h3>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-3 mb-md flex-grow">Tutorial praktis pembuatan sistem aquaponik mini memanfaatkan galon air bekas untuk ketahanan pangan keluarga di lahan sempit.</p>
+<a class="inline-flex items-center font-label-md text-label-md text-primary hover:text-primary-container group/link" href="programs/aquaponik-galon-bekas.html">
+                        Tonton Video <span class="material-symbols-outlined ml-1 group-hover/link:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</article>
+<!-- Card 8: Edukasi TOGA (P) -->
+<article class="program-card flex flex-col bg-surface-container-lowest rounded-2xl ambient-shadow overflow-hidden group border border-outline-variant/30 hover:border-primary/50 transition-all duration-300 transform hover:-translate-y-1 row-span-2" data-title="Video Edukasi TOGA" data-topic="Kesehatan" data-type="Video">
+<div class="aspect-[3/4] w-full relative overflow-hidden bg-surface-dim">
+<img alt="Thumbnail video edukasi TOGA" class="object-contain w-full h-full group-hover:scale-105 transition-transform duration-500" src="../thumbnail/program/thumbnail_video_edukasi_toga.png">
+<div class="absolute top-sm left-sm bg-secondary-fixed text-on-secondary-fixed px-2 py-1 rounded-full font-label-sm text-label-sm border border-secondary-fixed/50 backdrop-blur-md">Video</div>
+</div>
+<div class="p-md flex flex-col flex-grow">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-xs group-hover:text-primary transition-colors">Video Edukasi TOGA</h3>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-3 mb-md flex-grow">Video penanaman TOGA dan pencegahan organisme pengganggu tanaman yang mudah dipahami warga.</p>
+<a class="inline-flex items-center font-label-md text-label-md text-primary hover:text-primary-container group/link" href="programs/video-edukasi-toga.html">
+                        Lihat Program <span class="material-symbols-outlined ml-1 group-hover/link:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</article>
+<!-- Card 9: Sampah UMKM (P) -->
+<article class="program-card flex flex-col bg-surface-container-lowest rounded-2xl ambient-shadow overflow-hidden group border border-outline-variant/30 hover:border-primary/50 transition-all duration-300 transform hover:-translate-y-1 row-span-2" data-title="Bijak Kelola Sampah UMKM" data-topic="Lingkungan" data-type="Poster">
+<div class="aspect-[3/4] w-full relative overflow-hidden bg-surface-dim">
+<img alt="Thumbnail materi bijak kelola sampah UMKM" class="object-contain w-full h-full group-hover:scale-105 transition-transform duration-500" src="../thumbnail/program/thumbnail_bijak_kelola_sampah_umkm.jpg">
+<div class="absolute top-sm left-sm bg-secondary-fixed text-on-secondary-fixed px-2 py-1 rounded-full font-label-sm text-label-sm border border-secondary-fixed/50 backdrop-blur-md">Poster</div>
+</div>
+<div class="p-md flex flex-col flex-grow">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-xs group-hover:text-primary transition-colors">Bijak Kelola Sampah UMKM</h3>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-3 mb-md flex-grow">Infografis edukatif mengenai pemilahan dan pengolahan limbah sisa usaha bagi pelaku UMKM kuliner di lingkungan RW.</p>
+<a class="inline-flex items-center font-label-md text-label-md text-primary hover:text-primary-container group/link" href="programs/bijak-kelola-sampah-umkm.html">
+                        Lihat Program <span class="material-symbols-outlined ml-1 group-hover/link:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</article>
+<!-- Card 10: Leaflet UMKM (L) -->
+<article class="program-card flex flex-col bg-surface-container-lowest rounded-2xl ambient-shadow overflow-hidden group border border-outline-variant/30 hover:border-primary/50 transition-all duration-300 transform hover:-translate-y-1" data-title="Panduan UMKM Berkembang" data-topic="UMKM" data-type="Materi Edukasi">
+<div class="aspect-video w-full relative overflow-hidden bg-surface-dim">
+<img alt="Thumbnail panduan UMKM berkembang" class="object-contain w-full h-full group-hover:scale-105 transition-transform duration-500" src="../thumbnail/program/thumbnail_panduan_umkm_berkembang.png">
+<div class="absolute top-sm left-sm bg-tertiary-container text-on-tertiary-container px-2 py-1 rounded-full font-label-sm text-label-sm border border-tertiary-container/50 backdrop-blur-md">Materi Edukasi</div>
+</div>
+<div class="p-md flex flex-col flex-grow">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-xs group-hover:text-primary transition-colors">Panduan UMKM Berkembang</h3>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2 mb-md flex-grow">Panduan legalitas NIB dan digitalisasi usaha melalui ShopeeFood bagi pelaku UMKM.</p>
+<a class="inline-flex items-center font-label-md text-label-md text-primary hover:text-primary-container group/link" href="programs/panduan-umkm-berkembang.html">
+                        Lihat Program <span class="material-symbols-outlined ml-1 group-hover/link:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</article>
+<!-- Card 11: Akuaponik Lele (L) -->
+<article class="program-card flex flex-col bg-surface-container-lowest rounded-2xl ambient-shadow overflow-hidden group border border-outline-variant/30 hover:border-primary/50 transition-all duration-300 transform hover:-translate-y-1" data-title="Sistem Akuaponik Lele" data-topic="Lingkungan" data-type="Panduan">
+<div class="aspect-video w-full relative overflow-hidden bg-surface-dim">
+<img alt="Thumbnail sistem akuaponik lele" class="object-contain w-full h-full group-hover:scale-105 transition-transform duration-500" src="../thumbnail/program/thumbnail_sistem_akuaponik_lele.png">
+<div class="absolute top-sm left-sm bg-secondary-container text-on-secondary-container px-2 py-1 rounded-full font-label-sm text-label-sm border border-secondary-container/50 backdrop-blur-md">Panduan</div>
+</div>
+<div class="p-md flex flex-col flex-grow">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-xs group-hover:text-primary transition-colors">Sistem Akuaponik Lele</h3>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2 mb-md flex-grow">Modul petunjuk integrasi budi daya ikan lele dan sayuran hidroponik dalam satu sistem sirkulasi air.</p>
+<a class="inline-flex items-center font-label-md text-label-md text-primary hover:text-primary-container group/link" href="programs/sistem-akuaponik-lele.html">
+                        Lihat Program <span class="material-symbols-outlined ml-1 group-hover/link:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</article>
+<!-- Card 12: Gizi Seimbang (L) -->
+<article class="program-card flex flex-col bg-surface-container-lowest rounded-2xl ambient-shadow overflow-hidden group border border-outline-variant/30 hover:border-primary/50 transition-all duration-300 transform hover:-translate-y-1" data-title="Gizi Seimbang pada Anak" data-topic="Kesehatan" data-type="Materi Edukasi">
+<div class="aspect-video w-full relative overflow-hidden bg-surface-dim">
+<img alt="Thumbnail panduan gizi seimbang pada anak" class="object-contain w-full h-full group-hover:scale-105 transition-transform duration-500" src="../thumbnail/program/thumbnail_gizi_seimbang_anak.png">
+<div class="absolute top-sm left-sm bg-tertiary-container text-on-tertiary-container px-2 py-1 rounded-full font-label-sm text-label-sm border border-tertiary-container/50 backdrop-blur-md">Materi Edukasi</div>
+</div>
+<div class="p-md flex flex-col flex-grow">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-xs group-hover:text-primary transition-colors">Gizi Seimbang pada Anak</h3>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2 mb-md flex-grow">Materi penyuluhan porsi makan "Isi Piringku" untuk mencegah stunting dan menjaga kesehatan balita.</p>
+<a class="inline-flex items-center font-label-md text-label-md text-primary hover:text-primary-container group/link" href="programs/gizi-seimbang-anak.html">
+                        Lihat Program <span class="material-symbols-outlined ml-1 group-hover/link:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</article>
+<!-- Card 13: POC (L) -->
+<article class="program-card flex flex-col bg-surface-container-lowest rounded-2xl ambient-shadow overflow-hidden group border border-outline-variant/30 hover:border-primary/50 transition-all duration-300 transform hover:-translate-y-1" data-title="Pupuk Organik Cair (POC)" data-topic="Lingkungan" data-type="Video">
+<div class="aspect-video w-full relative overflow-hidden bg-surface-dim">
+<img alt="Thumbnail pembuatan pupuk organik cair" class="object-contain w-full h-full group-hover:scale-105 transition-transform duration-500" src="../thumbnail/program/thumbnail_pupuk_organik_cair.png">
+<div class="absolute top-sm left-sm bg-error-container text-on-error-container px-2 py-1 rounded-full font-label-sm text-label-sm border border-error-container/50 backdrop-blur-md flex items-center">
+<span class="material-symbols-outlined text-[14px] mr-1">play_circle</span> Video
+                    </div>
+</div>
+<div class="p-md flex flex-col flex-grow">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-xs group-hover:text-primary transition-colors">Pupuk Organik Cair (POC)</h3>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2 mb-md flex-grow">Demonstrasi pembuatan pupuk organik cair menggunakan limbah rumah tangga yang ramah lingkungan.</p>
+<a class="inline-flex items-center font-label-md text-label-md text-primary hover:text-primary-container group/link" href="programs/pupuk-organik-cair.html">
+                        Tonton Video <span class="material-symbols-outlined ml-1 group-hover/link:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</article>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest dark:bg-surface-container-low border-t border-outline-variant full-width mt-auto" data-site-footer>
+<div class="flex flex-col items-center text-center py-xl px-margin-mobile md:px-xl w-full">
+<a class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed mb-4" href="../index.html">GO Klitren</a>
+<nav class="flex flex-wrap justify-center gap-gutter mb-6" aria-label="Navigasi footer">
+<a class="text-on-surface-variant dark:text-on-surface-variant font-label-sm text-label-sm hover:underline hover:text-secondary transition-all duration-200" href="../index.html">Beranda</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant font-label-sm text-label-sm hover:underline hover:text-secondary transition-all duration-200" href="rw-13.html">RW 13</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant font-label-sm text-label-sm hover:underline hover:text-secondary transition-all duration-200" href="rw-16.html">RW 16</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant font-label-sm text-label-sm hover:underline hover:text-secondary transition-all duration-200" href="programs.html">Program dan Materi</a>
+</nav>
+<div class="font-body-md text-body-md text-on-surface-variant">&copy; 2026 GO Klitren</div>
+</div>
+</footer>
+<!-- Search Logic Script -->
+<script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const searchInput = document.getElementById('program-search');
+            const clearBtn = document.getElementById('clear-search');
+            const cards = document.querySelectorAll('.program-card');
+            const visibleCountSpan = document.getElementById('visible-count');
+            const totalCount = cards.length;
+            const emptyState = document.getElementById('empty-state');
+            const programGrid = document.getElementById('program-grid');
+            const resetBtn = document.getElementById('reset-btn');
+
+            function filterPrograms(searchTerm) {
+                const term = searchTerm.toLowerCase();
+                let visibleCount = 0;
+
+                cards.forEach(card => {
+                    const title = card.getAttribute('data-title').toLowerCase();
+                    const type = card.getAttribute('data-type').toLowerCase();
+                    const topic = card.getAttribute('data-topic').toLowerCase();
+                    const desc = card.querySelector('p').textContent.toLowerCase();
+
+                    if (title.includes(term) || type.includes(term) || topic.includes(term) || desc.includes(term)) {
+                        card.style.display = 'flex';
+                        visibleCount++;
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+
+                // Update UI based on results
+                visibleCountSpan.textContent = visibleCount;
+                
+                if (searchTerm.length > 0) {
+                    clearBtn.classList.remove('hidden');
+                } else {
+                    clearBtn.classList.add('hidden');
+                }
+
+                if (visibleCount === 0) {
+                    programGrid.classList.add('hidden');
+                    emptyState.classList.remove('hidden');
+                    emptyState.classList.add('flex');
+                } else {
+                    programGrid.classList.remove('hidden');
+                    emptyState.classList.add('hidden');
+                    emptyState.classList.remove('flex');
+                }
+            }
+
+            searchInput.addEventListener('input', (e) => {
+                filterPrograms(e.target.value);
+            });
+
+            clearBtn.addEventListener('click', () => {
+                searchInput.value = '';
+                filterPrograms('');
+                searchInput.focus();
+            });
+
+            resetBtn.addEventListener('click', () => {
+                searchInput.value = '';
+                filterPrograms('');
+            });
+        });
+    </script>
+
+
+<script src="../assets/js/site.js" defer></script>
+</body></html>

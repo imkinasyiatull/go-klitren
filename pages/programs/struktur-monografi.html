@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+
+<html lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Papan Struktur Kepengurusan &amp; Monografi - GO Klitren</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-primary-fixed-variant": "#005234",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-container-highest": "#dfe4de",
+                    "primary-fixed-dim": "#76daa7",
+                    "surface-container": "#eaefe9",
+                    "surface-tint": "#006c47",
+                    "on-background": "#171d19",
+                    "surface-dim": "#d6dbd5",
+                    "inverse-surface": "#2c322e",
+                    "on-tertiary-fixed-variant": "#7c2b2e",
+                    "surface-container-high": "#e4eae3",
+                    "outline-variant": "#bdcac0",
+                    "on-secondary-fixed": "#002022",
+                    "surface-variant": "#dfe4de",
+                    "tertiary-fixed-dim": "#ffb3b1",
+                    "secondary-fixed-dim": "#55d8e1",
+                    "error": "#ba1a1a",
+                    "background": "#f6fbf4",
+                    "secondary-fixed": "#76f5fe",
+                    "on-primary": "#ffffff",
+                    "on-surface-variant": "#3e4942",
+                    "on-secondary-container": "#006e74",
+                    "on-error": "#ffffff",
+                    "on-tertiary-container": "#ffffff",
+                    "inverse-primary": "#76daa7",
+                    "inverse-on-surface": "#edf2ec",
+                    "on-surface": "#171d19",
+                    "on-secondary-fixed-variant": "#004f54",
+                    "surface-bright": "#f6fbf4",
+                    "on-error-container": "#93000a",
+                    "on-secondary": "#ffffff",
+                    "secondary": "#00696f",
+                    "primary": "#006c46",
+                    "primary-container": "#16875b",
+                    "primary-fixed": "#92f7c2",
+                    "outline": "#6e7a71",
+                    "surface": "#f6fbf4",
+                    "on-primary-fixed": "#002112",
+                    "on-tertiary-fixed": "#410008",
+                    "on-tertiary": "#ffffff",
+                    "secondary-container": "#72f2fb",
+                    "tertiary-fixed": "#ffdad8",
+                    "tertiary-container": "#b9595a",
+                    "surface-container-low": "#f0f5ef",
+                    "on-primary-container": "#ffffff",
+                    "error-container": "#ffdad6",
+                    "tertiary": "#9a4143"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px",
+                    "2xl": "1rem"
+            },
+            "spacing": {
+                    "sm": "12px",
+                    "xs": "4px",
+                    "md": "24px",
+                    "margin-mobile": "16px",
+                    "gutter": "24px",
+                    "lg": "40px",
+                    "container-max": "1200px",
+                    "xl": "64px",
+                    "base": "8px"
+            },
+            "fontFamily": {
+                    "headline-xl": ["Inter"],
+                    "headline-lg-mobile": ["Inter"],
+                    "headline-lg": ["Inter"],
+                    "headline-md": ["Inter"],
+                    "body-md": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "label-sm": ["Inter"],
+                    "label-md": ["Inter"]
+            },
+            "fontSize": {
+                    "headline-xl": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "700"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                    "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .ambient-shadow {
+            box-shadow: 0 4px 20px rgba(0, 108, 70, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<header class="bg-surface dark:bg-surface-container-high docked full-width top-0 shadow-sm sticky z-50" data-site-header>
+<div class="flex justify-between items-center px-margin-mobile md:px-xl py-base w-full max-w-container-max mx-auto">
+<a class="font-headline-md text-headline-md font-extrabold text-primary dark:text-primary-fixed" href="../../index.html">GO Klitren</a>
+<nav class="hidden md:flex gap-gutter" aria-label="Navigasi utama">
+<a class="text-on-surface-variant dark:text-on-surface-variant font-label-md text-label-md hover:text-primary dark:hover:text-primary-fixed transition-colors" href="../../index.html">Beranda</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant font-label-md text-label-md hover:text-primary dark:hover:text-primary-fixed transition-colors" href="../rw-13.html">RW 13</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant font-label-md text-label-md hover:text-primary dark:hover:text-primary-fixed transition-colors" href="../rw-16.html">RW 16</a>
+<a class="text-primary dark:text-primary-fixed font-bold border-b-2 border-primary font-label-md text-label-md" href="../programs.html">Program dan Materi</a>
+</nav>
+<button class="bg-primary hover:bg-primary-container text-on-primary font-label-md text-label-md py-2 px-4 rounded-lg transition-colors hidden md:block" type="button">
+                Hubungi Kami
+            </button>
+<button aria-label="Menu" class="md:hidden text-primary" type="button">
+<span class="material-symbols-outlined" aria-hidden="true">menu</span>
+</button>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-grow w-full max-w-container-max mx-auto px-margin-mobile md:px-gutter py-xl flex flex-col gap-xl">
+<!-- Breadcrumb & Header Action -->
+<section class="flex flex-col md:flex-row justify-between items-start md:items-center gap-md border-b border-outline-variant pb-md">
+<div class="flex flex-col gap-xs">
+<p class="text-label-sm font-label-sm text-on-surface-variant">
+                    Beranda / Program dan Materi / Papan Struktur Kepengurusan &amp; Monografi
+                </p>
+<h1 class="text-headline-lg-mobile md:text-headline-lg font-headline-lg-mobile md:font-headline-lg text-primary">Papan Struktur Kepengurusan &amp; Monografi</h1>
+</div>
+<a class="inline-flex items-center gap-xs px-md py-sm bg-surface-container-highest text-on-surface rounded-lg text-label-md font-label-md hover:bg-outline-variant transition-colors group" href="../programs.html">
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-on-surface">arrow_back</span>
+                Kembali ke Program dan Materi
+            </a>
+</section>
+<!-- Bento Grid Layout for Main Info -->
+<section class="grid grid-cols-1 md:grid-cols-12 gap-md">
+<!-- Description Card (Spans 7 columns on Desktop) -->
+<div class="md:col-span-7 bg-surface-container-lowest rounded-2xl p-md ambient-shadow flex flex-col gap-md">
+<div class="flex items-center gap-sm mb-xs">
+<span class="inline-flex items-center justify-center px-sm py-xs bg-secondary-container text-on-secondary-container rounded-full text-label-sm font-label-sm border border-secondary">
+<span class="material-symbols-outlined text-[16px] mr-1">dashboard</span>
+                        Template
+                    </span>
+</div>
+<h2 class="text-headline-md font-headline-md text-on-background">Tentang Program</h2>
+<p class="text-body-md font-body-md text-on-surface-variant leading-relaxed">
+                    Program ini menyediakan papan informasi yang memuat struktur kepengurusan RW serta data monografi wilayah sebagai media informasi bagi masyarakat. Papan dirancang agar mudah diperbarui secara mandiri oleh pengurus sehingga informasi yang ditampilkan dapat selalu relevan, sekaligus meningkatkan transparansi dan memudahkan warga dalam mengakses informasi mengenai organisasi serta kondisi wilayah RW.
+                </p>
+</div>
+<!-- Media/Action Card (Spans 5 columns on Desktop) -->
+<div class="md:col-span-5 bg-surface-container-lowest rounded-2xl p-md ambient-shadow flex flex-col justify-between gap-md border-2 border-primary/10">
+<a aria-label="Buka template struktur kepengurusan dan monografi" class="block w-full aspect-video rounded-lg overflow-hidden bg-surface-variant relative group" href="https://drive.google.com/file/d/13xm8hXbOq02HsxWAcAUCNkMnvuv5-pts/view?usp=sharing" rel="noopener noreferrer" target="_blank">
+<img alt="Thumbnail struktur kepengurusan dan monografi" class="object-contain w-full h-full transition-transform duration-500 group-hover:scale-105" src="../../thumbnail/program/thumbnail_struktur_monografi.jpg"/>
+<div class="absolute inset-0 bg-primary/20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+<span class="material-symbols-outlined text-white text-[48px]">open_in_new</span>
+</div>
+</a>
+<div class="flex flex-col gap-sm mt-auto">
+<h3 class="text-label-md font-label-md text-on-background font-semibold">Akses Template</h3>
+<p class="text-body-md font-body-md text-on-surface-variant text-sm">Gunakan template ini untuk membuat papan struktur kepengurusan Anda sendiri.</p>
+<a class="w-full text-center px-md py-sm bg-primary text-on-primary rounded-lg text-label-md font-label-md hover:bg-primary-container transition-colors mt-2" href="https://drive.google.com/file/d/13xm8hXbOq02HsxWAcAUCNkMnvuv5-pts/view?usp=sharing" rel="noopener noreferrer" target="_blank">
+                        Buka Template
+                    </a>
+</div>
+</div>
+</section>
+<!-- Documentation Section (Asymmetric Grid) -->
+<section class="flex flex-col gap-md mt-lg">
+<div class="flex items-center gap-sm">
+<h2 class="text-headline-md font-headline-md text-on-background">Dokumentasi Implementasi</h2>
+<div class="h-px bg-outline-variant flex-grow ml-md"></div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-sm">
+<div class="aspect-square rounded-2xl overflow-hidden bg-surface-variant ambient-shadow md:col-span-2 md:row-span-2">
+<img alt="Dokumentasi 1" class="object-cover w-full h-full" data-alt="A photograph showing community leaders standing proudly next to a newly installed organizational chart board in a bright, modern neighborhood hall. The lighting is warm and natural, casting soft shadows. The board is cleanly designed in greens and creams. The mood is optimistic and collaborative." src="../../assets/images/programs/struktur-monografi/dokumentasi-01-pemasangan-papan.png"/>
+</div>
+<div class="aspect-square rounded-2xl overflow-hidden bg-surface-variant ambient-shadow">
+<img alt="Dokumentasi 2" class="object-cover w-full h-full" data-alt="Close up shot of a person's hand placing a name tag onto a community organizational chart board. The board features modern typography and subtle green borders. The lighting is bright and clear, emphasizing the tactile, easy-to-update nature of the board. Lush Community aesthetic." src="../../assets/images/programs/struktur-monografi/dokumentasi-02-pembaruan-data.png"/>
+</div>
+<div class="aspect-square rounded-2xl overflow-hidden bg-surface-variant ambient-shadow">
+<img alt="Dokumentasi 3" class="object-cover w-full h-full" data-alt="A wide angle shot of a neighborhood community center wall featuring a large, professionally printed monographic data board. It displays demographic charts and maps. The room is sunlit, modern, and inviting, with a focus on transparency and civic engagement. Warm, optimistic color palette." src="../../assets/images/programs/struktur-monografi/dokumentasi-03-papan-monografi.png"/>
+</div>
+<div class="aspect-[2/1] sm:aspect-square md:aspect-[2/1] rounded-2xl overflow-hidden bg-surface-variant ambient-shadow md:col-span-2">
+<img alt="Dokumentasi 4" class="object-cover w-full h-full" data-alt="Residents of a neighborhood gathered around an information board, discussing the community structure. The scene is lit by warm afternoon sunlight filtering through large windows. The mood is engaged and neighborly. The surrounding decor is modern organic, matching the Lush Community style." src="../../assets/images/programs/struktur-monografi/dokumentasi-04-sosialisasi-papan.png"/>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest dark:bg-surface-container-low border-t border-outline-variant full-width mt-auto" data-site-footer>
+<div class="flex flex-col items-center text-center py-xl px-margin-mobile md:px-xl w-full">
+<a class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed mb-4" href="../../index.html">GO Klitren</a>
+<nav class="flex flex-wrap justify-center gap-gutter mb-6" aria-label="Navigasi footer">
+<a class="text-on-surface-variant dark:text-on-surface-variant font-label-sm text-label-sm hover:underline hover:text-secondary transition-all duration-200" href="../../index.html">Beranda</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant font-label-sm text-label-sm hover:underline hover:text-secondary transition-all duration-200" href="../rw-13.html">RW 13</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant font-label-sm text-label-sm hover:underline hover:text-secondary transition-all duration-200" href="../rw-16.html">RW 16</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant font-label-sm text-label-sm hover:underline hover:text-secondary transition-all duration-200" href="../programs.html">Program dan Materi</a>
+</nav>
+<div class="font-body-md text-body-md text-on-surface-variant">&copy; 2026 GO Klitren</div>
+</div>
+</footer>
+<script src="../../assets/js/site.js" defer></script>
+</body></html>

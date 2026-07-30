@@ -1,0 +1,336 @@
+<!DOCTYPE html><html lang="id"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>TPA Kelompok Belajar RW 16 - GO Klitren</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-container-low": "#f0f5ef",
+                      "outline-variant": "#bdcac0",
+                      "surface-tint": "#006c47",
+                      "surface-variant": "#dfe4de",
+                      "on-primary-fixed-variant": "#005234",
+                      "surface-dim": "#d6dbd5",
+                      "on-secondary": "#ffffff",
+                      "surface": "#f6fbf4",
+                      "on-tertiary-fixed": "#410008",
+                      "on-primary-fixed": "#002112",
+                      "tertiary-container": "#b9595a",
+                      "surface-container-highest": "#dfe4de",
+                      "secondary-fixed-dim": "#55d8e1",
+                      "inverse-on-surface": "#edf2ec",
+                      "on-error": "#ffffff",
+                      "inverse-surface": "#2c322e",
+                      "secondary": "#00696f",
+                      "on-tertiary-container": "#ffffff",
+                      "secondary-container": "#72f2fb",
+                      "error-container": "#ffdad6",
+                      "tertiary-fixed": "#ffdad8",
+                      "on-tertiary": "#ffffff",
+                      "surface-container-high": "#e4eae3",
+                      "on-background": "#171d19",
+                      "secondary-fixed": "#76f5fe",
+                      "primary-fixed-dim": "#76daa7",
+                      "surface-container": "#eaefe9",
+                      "on-secondary-fixed-variant": "#004f54",
+                      "on-primary-container": "#ffffff",
+                      "inverse-primary": "#76daa7",
+                      "primary-container": "#16875b",
+                      "on-surface": "#171d19",
+                      "tertiary-fixed-dim": "#ffb3b1",
+                      "primary": "#006c46",
+                      "on-error-container": "#93000a",
+                      "error": "#ba1a1a",
+                      "background": "#f6fbf4",
+                      "on-secondary-container": "#006e74",
+                      "outline": "#6e7a71",
+                      "on-secondary-fixed": "#002022",
+                      "primary-fixed": "#92f7c2",
+                      "on-primary": "#ffffff",
+                      "tertiary": "#9a4143",
+                      "surface-bright": "#f6fbf4",
+                      "on-tertiary-fixed-variant": "#7c2b2e",
+                      "surface-container-lowest": "#ffffff",
+                      "on-surface-variant": "#3e4942"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "lg": "40px",
+                      "gutter": "24px",
+                      "sm": "12px",
+                      "md": "24px",
+                      "base": "8px",
+                      "xl": "64px",
+                      "container-max": "1200px",
+                      "xs": "4px",
+                      "margin-mobile": "16px"
+              },
+              "fontFamily": {
+                      "body-lg": [
+                              "Inter"
+                      ],
+                      "label-sm": [
+                              "Inter"
+                      ],
+                      "headline-lg": [
+                              "Inter"
+                      ],
+                      "body-md": [
+                              "Inter"
+                      ],
+                      "label-md": [
+                              "Inter"
+                      ],
+                      "headline-xl": [
+                              "Inter"
+                      ],
+                      "headline-md": [
+                              "Inter"
+                      ],
+                      "headline-lg-mobile": [
+                              "Inter"
+                      ]
+              },
+              "fontSize": {
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-sm": [
+                              "12px",
+                              {
+                                      "lineHeight": "16px",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "headline-lg": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-md": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "letterSpacing": "0.01em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-xl": [
+                              "48px",
+                              {
+                                      "lineHeight": "56px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "800"
+                              }
+                      ],
+                      "headline-md": [
+                              "24px",
+                              {
+                                      "lineHeight": "32px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-lg-mobile": [
+                              "28px",
+                              {
+                                      "lineHeight": "36px",
+                                      "fontWeight": "700"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col antialiased">
+<!-- TopNavBar -->
+<header class="bg-surface dark:bg-surface-container-high docked full-width top-0 shadow-sm sticky z-50" data-site-header>
+<div class="flex justify-between items-center px-margin-mobile md:px-xl py-base w-full max-w-container-max mx-auto">
+<a class="font-headline-md text-headline-md font-extrabold text-primary dark:text-primary-fixed" href="../../index.html">GO Klitren</a>
+<nav class="hidden md:flex gap-gutter" aria-label="Navigasi utama">
+<a class="text-on-surface-variant dark:text-on-surface-variant font-label-md text-label-md hover:text-primary dark:hover:text-primary-fixed transition-colors" href="../../index.html">Beranda</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant font-label-md text-label-md hover:text-primary dark:hover:text-primary-fixed transition-colors" href="../rw-13.html">RW 13</a>
+<a class="text-primary dark:text-primary-fixed font-bold border-b-2 border-primary font-label-md text-label-md" href="../rw-16.html">RW 16</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant font-label-md text-label-md hover:text-primary dark:hover:text-primary-fixed transition-colors" href="../programs.html">Program dan Materi</a>
+</nav>
+<button class="bg-primary hover:bg-primary-container text-on-primary font-label-md text-label-md py-2 px-4 rounded-lg transition-colors hidden md:block" type="button">
+                Hubungi Kami
+            </button>
+<button aria-label="Menu" class="md:hidden text-primary" type="button">
+<span class="material-symbols-outlined" aria-hidden="true">menu</span>
+</button>
+</div>
+</header>
+<main class="flex-grow w-full max-w-container-max mx-auto px-margin-mobile md:px-xl py-xl space-y-xl">
+<!-- Header Section -->
+<section class="space-y-md">
+<nav aria-label="Breadcrumb" class="flex text-on-surface-variant font-label-sm text-label-sm space-x-2">
+<a class="hover:text-primary transition-colors" href="../../index.html">Beranda</a>
+<span class="">&gt;</span>
+<a class="hover:text-primary transition-colors" href="../rw-16.html">RW 16</a>
+<span class="">&gt;</span>
+<a class="hover:text-primary transition-colors" href="../rw-16.html">Kegiatan Warga</a>
+<span class="">&gt;</span>
+<span class="text-on-surface font-semibold">TPA Kelompok Belajar</span>
+</nav>
+<div class="flex flex-col md:flex-row md:justify-between md:items-end gap-gutter">
+<div class="space-y-sm max-w-3xl">
+<div class="inline-flex items-center bg-surface-container-low text-primary px-3 py-1 rounded-full font-label-sm text-label-sm border border-outline-variant">
+                        Kegiatan Warga RW 16
+                    </div>
+<h1 class="font-headline-xl text-headline-xl text-on-surface">TPA Kelompok Belajar RW 16</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+                        Wadah belajar bagi anak-anak di lingkungan RW 16 untuk meningkatkan literasi dan pendidikan karakter sejak dini.
+                    </p>
+</div>
+<button class="flex-shrink-0 bg-surface-container-highest text-on-surface font-label-md text-label-md px-md py-sm rounded-lg hover:bg-surface-variant transition-colors border border-outline-variant flex items-center gap-2">
+<span class="material-symbols-outlined">arrow_back</span>
+                    Kembali ke RW 16
+                </button>
+</div>
+<div class="w-full h-64 md:h-96 rounded-2xl overflow-hidden shadow-sm border border-outline-variant mt-lg">
+<img class="w-full h-full object-cover" data-alt="A bright, cheerful photo of children in a community learning center, sitting together at low wooden tables with colorful books. The room is flooded with warm, natural sunlight, creating a modern, optimistic atmosphere. Lush green plants are visible outside the window, matching the vibrant, naturalistic aesthetic of the design system. The scene is heartwarming and focused on educational growth." src="../../assets/images/activities/rw-16-tpa-kelompok-belajar/cover.jpeg">
+</div>
+</section>
+<!-- Main Content & Sidebar -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-xl">
+<!-- Left Column: Content -->
+<div class="md:col-span-2 space-y-xl">
+<div class="space-y-md">
+<h2 class="font-headline-lg text-headline-lg">Tentang Kelompok Belajar</h2>
+<div class="font-body-md text-body-md text-on-surface-variant space-y-4">
+<p class="">TPA Kelompok Belajar RW 16 diinisiasi untuk memberikan fasilitas pembelajaran tambahan yang berkualitas dan dapat diakses oleh seluruh anak di lingkungan kami. Fokus kami tidak hanya pada pencapaian akademis dasar, tetapi juga pada pembangunan karakter yang kuat, kreativitas, dan rasa kebersamaan antar warga sejak usia dini.</p>
+<p class="">Kegiatan ini dikelola secara swadaya oleh relawan dari warga RW 16 yang peduli terhadap perkembangan generasi penerus, didukung oleh fasilitas lingkungan yang nyaman dan aman.</p>
+</div>
+</div>
+<div class="space-y-md">
+<h2 class="font-headline-lg text-headline-lg">Kegiatan Utama</h2>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-gutter">
+<div class="bg-surface-container-lowest p-md rounded-2xl shadow-sm border border-outline-variant space-y-sm hover:shadow-md transition-shadow">
+<div class="w-12 h-12 bg-primary-container text-on-primary-container rounded-full flex items-center justify-center mb-sm">
+<span class="material-symbols-outlined">menu_book</span>
+</div>
+<h3 class="font-headline-md text-headline-md">Bimbingan Belajar</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Pendampingan mengerjakan tugas sekolah dan penguatan materi pelajaran dasar seperti matematika dan bahasa.</p>
+</div>
+<div class="bg-surface-container-lowest p-md rounded-2xl shadow-sm border border-outline-variant space-y-sm hover:shadow-md transition-shadow">
+<div class="w-12 h-12 bg-secondary-container text-on-secondary-container rounded-full flex items-center justify-center mb-sm">
+<span class="material-symbols-outlined">menu_book</span>
+</div>
+<h3 class="font-headline-md text-headline-md">Belajar Mengaji</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Belajar membaca Al-Qur’an, mengenal huruf hijaiyah, serta memperbaiki pelafalan sesuai tajwid.</p>
+</div>
+<div class="bg-surface-container-lowest p-md rounded-2xl shadow-sm border border-outline-variant space-y-sm hover:shadow-md transition-shadow sm:col-span-2 md:col-span-1">
+<div class="w-12 h-12 bg-tertiary-container text-on-tertiary-container rounded-full flex items-center justify-center mb-sm">
+<span class="material-symbols-outlined">import_contacts</span>
+</div>
+<h3 class="font-headline-md text-headline-md">Literasi Anak</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Sesi membaca bersama dan mendongeng untuk menumbuhkan minat baca sejak usia dini.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Sidebar -->
+<div class="md:col-span-1">
+<div class="bg-surface-container p-md rounded-2xl shadow-sm border border-outline-variant space-y-md sticky top-[100px]">
+<h3 class="font-headline-md text-headline-md border-b border-outline-variant pb-sm">Informasi Kegiatan</h3>
+<ul class="space-y-sm">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary mt-1">calendar_month</span>
+<div>
+<span class="block font-label-md text-label-md text-on-surface-variant">Jadwal</span>
+<span class="block font-body-md text-body-md text-on-surface">Belum diisi</span>
+</div>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary mt-1">location_on</span>
+<div>
+<span class="block font-label-md text-label-md text-on-surface-variant">Lokasi</span>
+<span class="block font-body-md text-body-md text-on-surface">Belum diisi</span>
+</div>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary mt-1">group</span>
+<div>
+<span class="block font-label-md text-label-md text-on-surface-variant">Peserta</span>
+<span class="block font-body-md text-body-md text-on-surface">Belum diisi</span>
+</div>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary mt-1">person</span>
+<div>
+<span class="block font-label-md text-label-md text-on-surface-variant">Penanggung Jawab</span>
+<span class="block font-body-md text-body-md text-on-surface">Belum diisi</span>
+</div>
+</li>
+</ul>
+<div class="pt-sm">
+</div>
+</div>
+</div>
+</section>
+<!-- Gallery Section -->
+<section class="space-y-md">
+<h2 class="font-headline-lg text-headline-lg">Galeri Kegiatan</h2>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-gutter">
+<div class="aspect-square rounded-2xl overflow-hidden shadow-sm border border-outline-variant">
+<img class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" data-alt="Close up shot of a child's hands painting brightly colored flowers on paper, set in a well-lit community room. Warm, optimistic aesthetic." src="../../assets/images/activities/rw-16-tpa-kelompok-belajar/gallery-01-kegiatan-melukis.jpeg">
+</div>
+<div class="aspect-square rounded-2xl overflow-hidden shadow-sm border border-outline-variant">
+<img class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" data-alt="A group of smiling kids looking at a large storybook held by a volunteer teacher. The background is slightly blurred showing an outdoor community park setting." src="../../assets/images/activities/rw-16-tpa-kelompok-belajar/gallery-02-membaca-bersama.jpg">
+</div>
+<div class="aspect-square rounded-2xl overflow-hidden shadow-sm border border-outline-variant">
+<img class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" data-alt="A volunteer helping a young boy with his math homework. They are sitting at a clean wooden table. The room has soft, natural lighting." src="../../assets/images/activities/rw-16-tpa-kelompok-belajar/gallery-03-bimbingan-belajar.jpg">
+</div>
+<div class="aspect-square rounded-2xl overflow-hidden shadow-sm border border-outline-variant">
+<img class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" data-alt="Children playing an educational board game together on the floor of a community center. High key lighting, modern organic visual style." src="../../assets/images/activities/rw-16-tpa-kelompok-belajar/gallery-04-permainan-edukatif.jpg">
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest dark:bg-surface-container-low border-t border-outline-variant full-width mt-auto" data-site-footer>
+<div class="flex flex-col items-center text-center py-xl px-margin-mobile md:px-xl w-full">
+<a class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed mb-4" href="../../index.html">GO Klitren</a>
+<nav class="flex flex-wrap justify-center gap-gutter mb-6" aria-label="Navigasi footer">
+<a class="text-on-surface-variant dark:text-on-surface-variant font-label-sm text-label-sm hover:underline hover:text-secondary transition-all duration-200" href="../../index.html">Beranda</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant font-label-sm text-label-sm hover:underline hover:text-secondary transition-all duration-200" href="../rw-13.html">RW 13</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant font-label-sm text-label-sm hover:underline hover:text-secondary transition-all duration-200" href="../rw-16.html">RW 16</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant font-label-sm text-label-sm hover:underline hover:text-secondary transition-all duration-200" href="../programs.html">Program dan Materi</a>
+</nav>
+<div class="font-body-md text-body-md text-on-surface-variant">&copy; 2026 GO Klitren</div>
+</div>
+</footer>
+
+
+<script src="../../assets/js/site.js" defer></script>
+</body></html>

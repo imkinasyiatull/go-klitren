@@ -1,0 +1,313 @@
+<!DOCTYPE html><html class="light" lang="id"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>RW 13 - GO Klitren</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-error": "#ffffff",
+                        "on-tertiary-fixed-variant": "#7c2b2e",
+                        "on-background": "#171d19",
+                        "secondary-fixed": "#76f5fe",
+                        "tertiary-fixed-dim": "#ffb3b1",
+                        "on-error-container": "#93000a",
+                        "primary": "#006c46",
+                        "on-secondary-fixed-variant": "#004f54",
+                        "surface-variant": "#dfe4de",
+                        "tertiary": "#9a4143",
+                        "on-surface": "#171d19",
+                        "surface-container-high": "#e4eae3",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-bright": "#f6fbf4",
+                        "on-tertiary-container": "#ffffff",
+                        "on-primary-container": "#ffffff",
+                        "surface-container-low": "#f0f5ef",
+                        "inverse-surface": "#2c322e",
+                        "error": "#ba1a1a",
+                        "surface-container-highest": "#dfe4de",
+                        "outline-variant": "#bdcac0",
+                        "tertiary-container": "#b9595a",
+                        "on-tertiary-fixed": "#410008",
+                        "on-primary-fixed": "#002112",
+                        "on-primary": "#ffffff",
+                        "surface-tint": "#006c47",
+                        "on-secondary-fixed": "#002022",
+                        "primary-fixed": "#92f7c2",
+                        "primary-container": "#16875b",
+                        "secondary-container": "#72f2fb",
+                        "on-primary-fixed-variant": "#005234",
+                        "on-tertiary": "#ffffff",
+                        "surface-dim": "#d6dbd5",
+                        "surface-container": "#eaefe9",
+                        "on-secondary": "#ffffff",
+                        "surface": "#f6fbf4",
+                        "on-surface-variant": "#3e4942",
+                        "inverse-on-surface": "#edf2ec",
+                        "inverse-primary": "#76daa7",
+                        "secondary": "#00696f",
+                        "outline": "#6e7a71",
+                        "on-secondary-container": "#006e74",
+                        "primary-fixed-dim": "#76daa7",
+                        "tertiary-fixed": "#ffdad8",
+                        "error-container": "#ffdad6",
+                        "secondary-fixed-dim": "#55d8e1",
+                        "background": "#f6fbf4"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "xs": "4px",
+                        "lg": "40px",
+                        "container-max": "1200px",
+                        "margin-mobile": "16px",
+                        "base": "8px",
+                        "xl": "64px",
+                        "gutter": "24px",
+                        "sm": "12px",
+                        "md": "24px"
+                    },
+                    "fontFamily": {
+                        "headline-lg-mobile": ["Inter", "sans-serif"],
+                        "label-sm": ["Inter", "sans-serif"],
+                        "headline-lg": ["Inter", "sans-serif"],
+                        "headline-md": ["Inter", "sans-serif"],
+                        "body-md": ["Inter", "sans-serif"],
+                        "label-md": ["Inter", "sans-serif"],
+                        "headline-xl": ["Inter", "sans-serif"],
+                        "body-lg": ["Inter", "sans-serif"]
+                    },
+                    "fontSize": {
+                        "headline-lg-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "700" }],
+                        "label-sm": ["12px", { "lineHeight": "16px", "fontWeight": "500" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }],
+                        "headline-xl": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<style>
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-background text-on-background antialiased selection:bg-primary-container selection:text-on-primary-container min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<header class="bg-surface dark:bg-surface-container-high docked full-width top-0 shadow-sm sticky z-50" data-site-header>
+<div class="flex justify-between items-center px-margin-mobile md:px-xl py-base w-full max-w-container-max mx-auto">
+<a class="font-headline-md text-headline-md font-extrabold text-primary dark:text-primary-fixed" href="../index.html">GO Klitren</a>
+<nav class="hidden md:flex gap-gutter" aria-label="Navigasi utama">
+<a class="text-on-surface-variant dark:text-on-surface-variant font-label-md text-label-md hover:text-primary dark:hover:text-primary-fixed transition-colors" href="../index.html">Beranda</a>
+<a class="text-primary dark:text-primary-fixed font-bold border-b-2 border-primary font-label-md text-label-md" href="rw-13.html">RW 13</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant font-label-md text-label-md hover:text-primary dark:hover:text-primary-fixed transition-colors" href="rw-16.html">RW 16</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant font-label-md text-label-md hover:text-primary dark:hover:text-primary-fixed transition-colors" href="programs.html">Program dan Materi</a>
+</nav>
+<button class="bg-primary hover:bg-primary-container text-on-primary font-label-md text-label-md py-2 px-4 rounded-lg transition-colors hidden md:block" type="button">
+                Hubungi Kami
+            </button>
+<button aria-label="Menu" class="md:hidden text-primary" type="button">
+<span class="material-symbols-outlined" aria-hidden="true">menu</span>
+</button>
+</div>
+</header>
+<main class="w-full">
+<!-- Page Header -->
+<header class="w-full max-w-container-max mx-auto px-margin-mobile md:px-xl py-xl">
+<div class="flex flex-col md:flex-row gap-gutter items-center">
+<div class="w-full md:w-1/2 space-y-md">
+<h1 class="font-headline-xl text-headline-xl text-on-surface">RW 13 Klitren</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+                        Temukan informasi wilayah, RT, kegiatan warga, dan peta RW 13. Ruang digital untuk mempererat tali silaturahmi dan kolaborasi warga.
+                    </p>
+</div>
+<div class="w-full md:w-1/2 mt-lg md:mt-0">
+<div class="relative w-full h-64 md:h-96 rounded-2xl overflow-hidden shadow-lg border border-outline-variant/30">
+<img class="w-full h-full object-cover" data-alt="A wide, warm landscape photograph of a clean, vibrant Indonesian neighborhood street in Klitren during late afternoon golden hour. The scene features well-kept houses with small green gardens, a clear sky, and a subtle glowing light mode aesthetic reflecting neighborly warmth. The colors are rich greens and warm earthy tones." src="../assets/images/rw-13/cover.png">
+</div>
+</div>
+</div>
+</header>
+<!-- Informasi RT Section -->
+<section class="w-full bg-surface-container-lowest py-xl">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-xl">
+<div class="mb-lg max-w-3xl">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-sm">RT di RW 13</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Informasi pembagian wilayah RT yang berada di lingkungan RW 13 Klitren.</p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- RT 49 -->
+<div class="bg-surface-container-lowest rounded-2xl overflow-hidden shadow-[0_4px_20px_rgba(0,108,70,0.1)] border border-outline-variant/20 hover:shadow-[0_8px_30px_rgba(0,108,70,0.15)] transition-shadow duration-300">
+<div class="h-40 w-full relative bg-surface-dim">
+<img class="w-full h-full object-cover" data-alt="A close-up architectural photograph of a colorful, traditional neighborhood gateway (gapura) denoting an RT boundary in Indonesia. Bright daylight, crisp modern organic aesthetic with vivid green foliage framing the edges. The scene feels optimistic and welcoming." src="../assets/images/rw-13/rt-49.png">
+</div>
+<div class="p-md">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-1">RT 49</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Wilayah Utara</p>
+</div>
+</div>
+<!-- RT 50 -->
+<div class="bg-surface-container-lowest rounded-2xl overflow-hidden shadow-[0_4px_20px_rgba(0,108,70,0.1)] border border-outline-variant/20 hover:shadow-[0_8px_30px_rgba(0,108,70,0.15)] transition-shadow duration-300">
+<div class="h-40 w-full relative bg-surface-dim">
+<img class="w-full h-full object-cover" data-alt="A pleasant view of a community alleyway paved with clean paving blocks, lined with potted plants and painted walls in soft pastel colors. Shot in bright natural daylight, conveying a sense of clean, structured community living." src="../assets/images/rw-13/rt-50.png">
+</div>
+<div class="p-md">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-1">RT 50</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Wilayah Tengah</p>
+</div>
+</div>
+<!-- RT 51 -->
+<div class="bg-surface-container-lowest rounded-2xl overflow-hidden shadow-[0_4px_20px_rgba(0,108,70,0.1)] border border-outline-variant/20 hover:shadow-[0_8px_30px_rgba(0,108,70,0.15)] transition-shadow duration-300">
+<div class="h-40 w-full relative bg-surface-dim">
+<img class="w-full h-full object-cover" data-alt="A small community gathering space or gazebo (poskamling) surrounded by lush green tropical plants. Sunlight filters through the leaves, creating a warm, organic light mode aesthetic highlighting neighborhood safety and togetherness." src="../assets/images/rw-13/rt-51.png">
+</div>
+<div class="p-md">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-1">RT 51</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Wilayah Tengah</p>
+</div>
+</div>
+<!-- RT 52 -->
+<div class="bg-surface-container-lowest rounded-2xl overflow-hidden shadow-[0_4px_20px_rgba(0,108,70,0.1)] border border-outline-variant/20 hover:shadow-[0_8px_30px_rgba(0,108,70,0.15)] transition-shadow duration-300">
+<div class="h-40 w-full relative bg-surface-dim">
+<img class="w-full h-full object-cover" data-alt="A quiet residential street corner showing a neat row of houses with warm morning light casting soft shadows. The visual style is clean, modern, and breathable, emphasizing the tranquility of the neighborhood." src="../assets/images/rw-13/rt-52.png">
+</div>
+<div class="p-md">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-1">RT 52</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Wilayah Selatan</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Kegiatan Warga Section -->
+<section class="w-full bg-surface py-xl">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-xl">
+<div class="mb-lg max-w-3xl">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-sm">Kegiatan Warga RW 13</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Berbagai kegiatan dan kelompok yang tumbuh serta berkembang bersama warga RW 13.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Bank Sampah -->
+<div class="bg-surface-container-lowest rounded-2xl p-md shadow-[0_4px_20px_rgba(0,108,70,0.1)] border border-outline-variant/30 flex flex-col h-full group hover:border-primary transition-colors">
+<div class="h-48 w-full rounded-xl overflow-hidden mb-md relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A vibrant, modern photograph showing community members cheerfully sorting clean, recyclable materials into colorful bins. The scene is brightly lit, emphasizing eco-friendliness, energetic growth, and optimistic community action in a light mode palette." src="../assets/images/activities/rw-13-bank-sampah/cover.jpeg">
+<div class="absolute top-2 right-2 bg-secondary text-on-secondary font-label-sm text-label-sm px-2 py-1 rounded-full shadow-sm">Lingkungan</div>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2">Bank Sampah</h3>
+<p class="font-body-md text-body-md text-on-surface-variant flex-grow mb-md">Program pengelolaan sampah berbasis masyarakat untuk lingkungan yang lebih bersih dan ekonomi sirkular.</p>
+<a class="inline-flex items-center justify-center w-full bg-surface-container-low hover:bg-primary hover:text-on-primary text-primary border border-primary/20 hover:border-primary font-label-md text-label-md py-3 rounded-lg transition-all duration-300" href="activities/rw-13-bank-sampah.html">
+                            Lihat Kegiatan
+                            <span class="material-symbols-outlined ml-2 text-[20px]" style="font-variation-settings: 'FILL' 0;">arrow_forward</span>
+</a>
+</div>
+<!-- PKK -->
+<div class="bg-surface-container-lowest rounded-2xl p-md shadow-[0_4px_20px_rgba(0,108,70,0.1)] border border-outline-variant/30 flex flex-col h-full group hover:border-primary transition-colors">
+<div class="h-48 w-full rounded-xl overflow-hidden mb-md relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A bright, cheerful photo of Indonesian women in uniform batik gathering for a meeting in a well-lit community hall. The atmosphere is warm, collaborative, and neighborly, reflecting a modern organic aesthetic with ample natural light." src="../assets/images/activities/rw-13-pkk/cover.png">
+<div class="absolute top-2 right-2 bg-tertiary text-on-tertiary font-label-sm text-label-sm px-2 py-1 rounded-full shadow-sm">Keluarga</div>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2">PKK</h3>
+<p class="font-body-md text-body-md text-on-surface-variant flex-grow mb-md">Pemberdayaan Kesejahteraan Keluarga berfokus pada kesehatan, pendidikan, dan keterampilan warga.</p>
+<a class="inline-flex items-center justify-center w-full bg-surface-container-low hover:bg-primary hover:text-on-primary text-primary border border-primary/20 hover:border-primary font-label-md text-label-md py-3 rounded-lg transition-all duration-300" href="activities/rw-13-pkk.html">
+                            Lihat Kegiatan
+                            <span class="material-symbols-outlined ml-2 text-[20px]" style="font-variation-settings: 'FILL' 0;">arrow_forward</span>
+</a>
+</div>
+<!-- Posyandu -->
+<div class="bg-surface-container-lowest rounded-2xl p-md shadow-[0_4px_20px_rgba(0,108,70,0.1)] border border-outline-variant/30 flex flex-col h-full group hover:border-primary transition-colors">
+<div class="h-48 w-full rounded-xl overflow-hidden mb-md relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A heartwarming scene of healthcare volunteers weighing a smiling toddler at a community health post. Soft, optimistic lighting with crisp whites and primary emerald accents. The mood is nurturing and professional." src="../assets/images/activities/rw-13-posyandu/cover.jpg">
+<div class="absolute top-2 right-2 bg-secondary text-on-secondary font-label-sm text-label-sm px-2 py-1 rounded-full shadow-sm">Kesehatan</div>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2">Posyandu</h3>
+<p class="font-body-md text-body-md text-on-surface-variant flex-grow mb-md">Layanan kesehatan dasar terpadu untuk ibu, bayi, dan balita guna memantau tumbuh kembang.</p>
+<a class="inline-flex items-center justify-center w-full bg-surface-container-low hover:bg-primary hover:text-on-primary text-primary border border-primary/20 hover:border-primary font-label-md text-label-md py-3 rounded-lg transition-all duration-300" href="activities/rw-13-posyandu.html">
+                            Lihat Kegiatan
+                            <span class="material-symbols-outlined ml-2 text-[20px]" style="font-variation-settings: 'FILL' 0;">arrow_forward</span>
+</a>
+</div>
+<!-- Paguyuban -->
+<div class="bg-surface-container-lowest rounded-2xl p-md shadow-[0_4px_20px_rgba(0,108,70,0.1)] border border-outline-variant/30 flex flex-col h-full group hover:border-primary transition-colors">
+<div class="h-48 w-full rounded-xl overflow-hidden mb-md relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A lively neighborhood gathering with men and women sitting together outdoors at dusk, illuminated by warm string lights and soft ambient glow. The image portrays strong neighborly bonds, unity, and a relaxing community vibe." src="../assets/images/activities/rw-13-paguyuban/cover.jpeg">
+<div class="absolute top-2 right-2 bg-primary-container text-on-primary-container font-label-sm text-label-sm px-2 py-1 rounded-full shadow-sm">Sosial</div>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2">Paguyuban</h3>
+<p class="font-body-md text-body-md text-on-surface-variant flex-grow mb-md">Wadah silaturahmi antar warga untuk menjaga kerukunan, gotong royong, dan keamanan lingkungan.</p>
+<a class="inline-flex items-center justify-center w-full bg-surface-container-low hover:bg-primary hover:text-on-primary text-primary border border-primary/20 hover:border-primary font-label-md text-label-md py-3 rounded-lg transition-all duration-300" href="activities/rw-13-paguyuban.html">
+                            Lihat Kegiatan
+                            <span class="material-symbols-outlined ml-2 text-[20px]" style="font-variation-settings: 'FILL' 0;">arrow_forward</span>
+</a>
+</div>
+<!-- Lansia -->
+<div class="bg-surface-container-lowest rounded-2xl p-md shadow-[0_4px_20px_rgba(0,108,70,0.1)] border border-outline-variant/30 flex flex-col h-full group hover:border-primary transition-colors">
+<div class="h-48 w-full rounded-xl overflow-hidden mb-md relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Elderly community members participating in gentle morning exercises in a sunny park setting. The atmosphere is vibrant, healthy, and optimistic. Crisp lighting highlights the lush greenery and active lifestyle." src="../assets/images/activities/rw-13-lansia/cover.jpg">
+<div class="absolute top-2 right-2 bg-secondary text-on-secondary font-label-sm text-label-sm px-2 py-1 rounded-full shadow-sm">Kesehatan</div>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2">Posyandu Lansia</h3>
+<p class="font-body-md text-body-md text-on-surface-variant flex-grow mb-md">Kegiatan senam, pemeriksaan kesehatan, dan interaksi sosial khusus untuk kesejahteraan warga lanjut usia.</p>
+<a class="inline-flex items-center justify-center w-full bg-surface-container-low hover:bg-primary hover:text-on-primary text-primary border border-primary/20 hover:border-primary font-label-md text-label-md py-3 rounded-lg transition-all duration-300" href="activities/rw-13-lansia.html">
+                            Lihat Kegiatan
+                            <span class="material-symbols-outlined ml-2 text-[20px]" style="font-variation-settings: 'FILL' 0;">arrow_forward</span>
+</a>
+</div>
+<!-- UMKM -->
+<div class="bg-surface-container-lowest rounded-2xl p-md shadow-[0_4px_20px_rgba(0,108,70,0.1)] border border-outline-variant/30 flex flex-col h-full group hover:border-primary transition-colors">
+<div class="h-48 w-full rounded-xl overflow-hidden mb-md relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A neatly arranged display of local handmade crafts and packaged homemade snacks at a small neighborhood stall. Bright, clean lighting showcasing the products with a modern organic aesthetic, symbolizing local economic growth." src="../assets/images/activities/rw-13-umkm/cover.png">
+<div class="absolute top-2 right-2 bg-primary text-on-primary font-label-sm text-label-sm px-2 py-1 rounded-full shadow-sm">Ekonomi</div>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2">UMKM Warga</h3>
+<p class="font-body-md text-body-md text-on-surface-variant flex-grow mb-md">Mendukung dan mempromosikan usaha mikro kecil menengah hasil karya warga RW 13.</p>
+<a class="inline-flex items-center justify-center w-full bg-surface-container-low hover:bg-primary hover:text-on-primary text-primary border border-primary/20 hover:border-primary font-label-md text-label-md py-3 rounded-lg transition-all duration-300" href="activities/rw-13-umkm.html">
+                            Lihat Kegiatan
+                            <span class="material-symbols-outlined ml-2 text-[20px]" style="font-variation-settings: 'FILL' 0;">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Peta Wilayah Section -->
+<section class="w-full bg-surface-container-lowest py-xl">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-xl">
+<div class="mb-lg max-w-3xl">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-sm">Peta Wilayah RW 13</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Peta menampilkan batas wilayah, pembagian RT, jaringan jalan, fasilitas umum, titik dropbox, dan lokasi penting lainnya di RW 13.</p>
+</div>
+<div class="relative w-full rounded-2xl overflow-hidden border-2 border-surface-variant shadow-lg bg-surface-container flex items-center justify-center min-h-[400px] md:min-h-[600px] group">
+<img alt="Peta wilayah RW 13" class="absolute inset-0 w-full h-full object-contain bg-white" src="../thumbnail/program/thumbnail_peta_rw_13.png">
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest dark:bg-surface-container-low border-t border-outline-variant full-width mt-auto" data-site-footer>
+<div class="flex flex-col items-center text-center py-xl px-margin-mobile md:px-xl w-full">
+<a class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed mb-4" href="../index.html">GO Klitren</a>
+<nav class="flex flex-wrap justify-center gap-gutter mb-6" aria-label="Navigasi footer">
+<a class="text-on-surface-variant dark:text-on-surface-variant font-label-sm text-label-sm hover:underline hover:text-secondary transition-all duration-200" href="../index.html">Beranda</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant font-label-sm text-label-sm hover:underline hover:text-secondary transition-all duration-200" href="rw-13.html">RW 13</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant font-label-sm text-label-sm hover:underline hover:text-secondary transition-all duration-200" href="rw-16.html">RW 16</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant font-label-sm text-label-sm hover:underline hover:text-secondary transition-all duration-200" href="programs.html">Program dan Materi</a>
+</nav>
+<div class="font-body-md text-body-md text-on-surface-variant">&copy; 2026 GO Klitren</div>
+</div>
+</footer>
+
+
+<script src="../assets/js/site.js" defer></script>
+</body></html>

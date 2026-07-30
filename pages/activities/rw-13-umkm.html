@@ -1,0 +1,316 @@
+<!DOCTYPE html><html lang="id" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>UMKM RW 13 - GO Klitren</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "inverse-primary": "#76daa7",
+                        "on-tertiary": "#ffffff",
+                        "surface-tint": "#006c47",
+                        "surface-bright": "#f6fbf4",
+                        "tertiary": "#9a4143",
+                        "surface-variant": "#dfe4de",
+                        "surface-container-highest": "#dfe4de",
+                        "inverse-on-surface": "#edf2ec",
+                        "on-secondary-fixed": "#002022",
+                        "on-surface": "#171d19",
+                        "background": "#f6fbf4",
+                        "outline-variant": "#bdcac0",
+                        "on-primary-fixed-variant": "#005234",
+                        "error": "#ba1a1a",
+                        "primary-container": "#16875b",
+                        "secondary-container": "#72f2fb",
+                        "outline": "#6e7a71",
+                        "on-tertiary-fixed": "#410008",
+                        "surface-container": "#eaefe9",
+                        "secondary": "#00696f",
+                        "tertiary-container": "#b9595a",
+                        "surface-container-low": "#f0f5ef",
+                        "primary": "#006c46",
+                        "on-secondary-fixed-variant": "#004f54",
+                        "tertiary-fixed-dim": "#ffb3b1",
+                        "on-background": "#171d19",
+                        "on-error": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary-fixed": "#002112",
+                        "on-error-container": "#93000a",
+                        "on-primary-container": "#ffffff",
+                        "secondary-fixed-dim": "#55d8e1",
+                        "on-secondary": "#ffffff",
+                        "on-secondary-container": "#006e74",
+                        "surface-dim": "#d6dbd5",
+                        "surface-container-high": "#e4eae3",
+                        "tertiary-fixed": "#ffdad8",
+                        "secondary-fixed": "#76f5fe",
+                        "on-tertiary-fixed-variant": "#7c2b2e",
+                        "on-primary": "#ffffff",
+                        "inverse-surface": "#2c322e",
+                        "on-surface-variant": "#3e4942",
+                        "primary-fixed": "#92f7c2",
+                        "on-tertiary-container": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "primary-fixed-dim": "#76daa7",
+                        "surface": "#f6fbf4"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "xs": "4px",
+                        "margin-mobile": "16px",
+                        "sm": "12px",
+                        "base": "8px",
+                        "md": "24px",
+                        "xl": "64px",
+                        "container-max": "1200px",
+                        "lg": "40px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Inter"],
+                        "body-md": ["Inter"],
+                        "headline-xl": ["Inter"],
+                        "headline-lg-mobile": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "label-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "headline-xl": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "700" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "label-sm": ["12px", { "lineHeight": "16px", "fontWeight": "500" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .ambient-shadow {
+            box-shadow: 0 4px 20px rgba(0, 108, 71, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<header class="bg-surface dark:bg-surface-container-high docked full-width top-0 shadow-sm sticky z-50" data-site-header>
+<div class="flex justify-between items-center px-margin-mobile md:px-xl py-base w-full max-w-container-max mx-auto">
+<a class="font-headline-md text-headline-md font-extrabold text-primary dark:text-primary-fixed" href="../../index.html">GO Klitren</a>
+<nav class="hidden md:flex gap-gutter" aria-label="Navigasi utama">
+<a class="text-on-surface-variant dark:text-on-surface-variant font-label-md text-label-md hover:text-primary dark:hover:text-primary-fixed transition-colors" href="../../index.html">Beranda</a>
+<a class="text-primary dark:text-primary-fixed font-bold border-b-2 border-primary font-label-md text-label-md" href="../rw-13.html">RW 13</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant font-label-md text-label-md hover:text-primary dark:hover:text-primary-fixed transition-colors" href="../rw-16.html">RW 16</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant font-label-md text-label-md hover:text-primary dark:hover:text-primary-fixed transition-colors" href="../programs.html">Program dan Materi</a>
+</nav>
+<button class="bg-primary hover:bg-primary-container text-on-primary font-label-md text-label-md py-2 px-4 rounded-lg transition-colors hidden md:block" type="button">
+                Hubungi Kami
+            </button>
+<button aria-label="Menu" class="md:hidden text-primary" type="button">
+<span class="material-symbols-outlined" aria-hidden="true">menu</span>
+</button>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-grow max-w-container-max mx-auto w-full px-margin-mobile md:px-gutter py-xl flex flex-col gap-xl">
+<!-- Hero Section -->
+<section class="text-center max-w-3xl mx-auto flex flex-col gap-md items-center">
+<h1 class="font-headline-xl text-headline-lg-mobile md:text-headline-xl text-primary">UMKM RW 13</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+                Dukung pertumbuhan ekonomi lokal dengan berbelanja dan memanfaatkan jasa dari usaha mikro, kecil, dan menengah di wilayah RW 13 Klitren. Temukan berbagai kebutuhan Anda di sini.
+            </p>
+</section>
+<!-- UMKM Grid -->
+<section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-md">
+<!-- Card 1 -->
+<article class="bg-surface-container-lowest rounded-2xl overflow-hidden ambient-shadow flex flex-col group transition-transform duration-300 hover:-translate-y-1">
+<div class="h-64 relative overflow-hidden bg-surface-container-low p-2">
+<img alt="Poster WARUNG IJO BU YATI" class="object-contain w-full h-full group-hover:scale-105 transition-transform duration-500" src="../../thumbnail/UMKM_RW_13/umkm_1.png">
+</div>
+<div class="p-md flex flex-col gap-sm flex-grow">
+<h2 class="font-headline-md text-headline-md text-primary">WARUNG IJO &ldquo;BU YATI&rdquo;</h2>
+<div class="flex items-start gap-base text-on-surface-variant font-body-md text-body-md">
+<span class="material-symbols-outlined text-outline mt-1 shrink-0" data-icon="location_on">location_on</span>
+<p class="">Kepuh GK 3/950, Klitren, Gondokusuman</p>
+</div>
+<div class="flex items-start gap-base text-on-surface-variant font-body-md text-body-md">
+<span class="material-symbols-outlined text-outline mt-1 shrink-0" data-icon="person">person</span>
+<p class="">Bu Yati (0857-8279-3758)</p>
+</div>
+<div class="flex items-start gap-base text-on-surface-variant font-body-md text-body-md">
+<span class="material-symbols-outlined text-outline mt-1 shrink-0" data-icon="schedule">schedule</span>
+<p class="">Senin - Sabtu, mulai 07.00</p>
+</div>
+<div class="mt-auto pt-sm">
+<a class="inline-flex items-center gap-xs font-label-md text-label-md text-primary hover:text-on-primary-fixed-variant transition-colors" href="https://wa.me/6285782793758" rel="noopener noreferrer" target="_blank">
+                            Hubungi via WhatsApp <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+</div>
+</article>
+<!-- Card 2 -->
+<article class="bg-surface-container-lowest rounded-2xl overflow-hidden ambient-shadow flex flex-col group transition-transform duration-300 hover:-translate-y-1">
+<div class="h-64 relative overflow-hidden bg-surface-container-low p-2">
+<img alt="Poster WARUNG IJO BU SRI" class="object-contain w-full h-full group-hover:scale-105 transition-transform duration-500" src="../../thumbnail/UMKM_RW_13/umkm_2.png">
+</div>
+<div class="p-md flex flex-col gap-sm flex-grow">
+<h2 class="font-headline-md text-headline-md text-primary">WARUNG IJO &ldquo;BU SRI&rdquo;</h2>
+<div class="flex items-start gap-base text-on-surface-variant font-body-md text-body-md">
+<span class="material-symbols-outlined text-outline mt-1 shrink-0" data-icon="location_on">location_on</span>
+<p class="">Jl. Affandi, Klitren (seberang Pasar Demangan)</p>
+</div>
+<div class="flex items-start gap-base text-on-surface-variant font-body-md text-body-md">
+<span class="material-symbols-outlined text-outline mt-1 shrink-0" data-icon="person">person</span>
+<p class="">Bu Sri (0877-3841-1124)</p>
+</div>
+<div class="flex items-start gap-base text-on-surface-variant font-body-md text-body-md">
+<span class="material-symbols-outlined text-outline mt-1 shrink-0" data-icon="schedule">schedule</span>
+<p class="">Senin - Jumat, 07.00 - 14.30</p>
+</div>
+<div class="mt-auto pt-sm">
+<a class="inline-flex items-center gap-xs font-label-md text-label-md text-primary hover:text-on-primary-fixed-variant transition-colors" href="https://wa.me/6287738411124" rel="noopener noreferrer" target="_blank">
+                            Hubungi via WhatsApp <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+</div>
+</article>
+<!-- Card 3 -->
+<article class="bg-surface-container-lowest rounded-2xl overflow-hidden ambient-shadow flex flex-col group transition-transform duration-300 hover:-translate-y-1">
+<div class="h-64 relative overflow-hidden bg-surface-container-low p-2">
+<img alt="Poster SEGO PECEL GOBYOS" class="object-contain w-full h-full group-hover:scale-105 transition-transform duration-500" src="../../thumbnail/UMKM_RW_13/umkm_3.png">
+</div>
+<div class="p-md flex flex-col gap-sm flex-grow">
+<h2 class="font-headline-md text-headline-md text-primary">SEGO PECEL GOBYOS</h2>
+<div class="flex items-start gap-base text-on-surface-variant font-body-md text-body-md">
+<span class="material-symbols-outlined text-outline mt-1 shrink-0" data-icon="location_on">location_on</span>
+<p class="">Jl. Affandi, Klitren (seberang Pasar Demangan)</p>
+</div>
+<div class="flex items-start gap-base text-on-surface-variant font-body-md text-body-md">
+<span class="material-symbols-outlined text-outline mt-1 shrink-0" data-icon="person">person</span>
+<p class="">Bu Anni (0812-5263-430)</p>
+</div>
+<div class="flex items-start gap-base text-on-surface-variant font-body-md text-body-md">
+<span class="material-symbols-outlined text-outline mt-1 shrink-0" data-icon="schedule">schedule</span>
+<p class="">Setiap hari, 06.30 - 09.30</p>
+</div>
+<div class="mt-auto pt-sm">
+<a class="inline-flex items-center gap-xs font-label-md text-label-md text-primary hover:text-on-primary-fixed-variant transition-colors" href="https://wa.me/628125263430" rel="noopener noreferrer" target="_blank">
+                            Hubungi via WhatsApp <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+</div>
+</article>
+<!-- Card 4 -->
+<article class="bg-surface-container-lowest rounded-2xl overflow-hidden ambient-shadow flex flex-col group transition-transform duration-300 hover:-translate-y-1">
+<div class="h-64 relative overflow-hidden bg-surface-container-low p-2">
+<img alt="Poster NASI RAMES BU IIM" class="object-contain w-full h-full group-hover:scale-105 transition-transform duration-500" src="../../thumbnail/UMKM_RW_13/umkm_4.png">
+</div>
+<div class="p-md flex flex-col gap-sm flex-grow">
+<h2 class="font-headline-md text-headline-md text-primary">NASI RAMES &ldquo;BU IIM&rdquo;</h2>
+<div class="flex items-start gap-base text-on-surface-variant font-body-md text-body-md">
+<span class="material-symbols-outlined text-outline mt-1 shrink-0" data-icon="location_on">location_on</span>
+<p class="">RW 13 Klitren</p>
+</div>
+<div class="flex items-start gap-base text-on-surface-variant font-body-md text-body-md">
+<span class="material-symbols-outlined text-outline mt-1 shrink-0" data-icon="person">person</span>
+<p class="">Bu Iim (0857-8682-7721)</p>
+</div>
+<div class="flex items-start gap-base text-on-surface-variant font-body-md text-body-md">
+<span class="material-symbols-outlined text-outline mt-1 shrink-0" data-icon="schedule">schedule</span>
+<p class="">Hubungi untuk informasi jam buka</p>
+</div>
+<div class="mt-auto pt-sm">
+<a class="inline-flex items-center gap-xs font-label-md text-label-md text-primary hover:text-on-primary-fixed-variant transition-colors" href="https://wa.me/6285786827721" rel="noopener noreferrer" target="_blank">
+                            Hubungi via WhatsApp <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+</div>
+</article>
+<!-- Card 5 -->
+<article class="bg-surface-container-lowest rounded-2xl overflow-hidden ambient-shadow flex flex-col group transition-transform duration-300 hover:-translate-y-1">
+<div class="h-64 relative overflow-hidden bg-surface-container-low p-2">
+<img alt="Poster WARUNG MAKAN PAWON IJO BY DUE LAUK" class="object-contain w-full h-full group-hover:scale-105 transition-transform duration-500" src="../../thumbnail/UMKM_RW_13/umkm_5.png">
+</div>
+<div class="p-md flex flex-col gap-sm flex-grow">
+<h2 class="font-headline-md text-headline-md text-primary">WARUNG MAKAN PAWON IJO BY DUE LAUK</h2>
+<div class="flex items-start gap-base text-on-surface-variant font-body-md text-body-md">
+<span class="material-symbols-outlined text-outline mt-1 shrink-0" data-icon="location_on">location_on</span>
+<p class="">Kepuh GK 3/1025 (depan SMP Institut Indonesia)</p>
+</div>
+<div class="flex items-start gap-base text-on-surface-variant font-body-md text-body-md">
+<span class="material-symbols-outlined text-outline mt-1 shrink-0" data-icon="person">person</span>
+<p class="">Pawon Ijo (0821-2284-0930)</p>
+</div>
+<div class="flex items-start gap-base text-on-surface-variant font-body-md text-body-md">
+<span class="material-symbols-outlined text-outline mt-1 shrink-0" data-icon="schedule">schedule</span>
+<p class="">Setiap hari, 10.00 - 20.00</p>
+</div>
+<div class="mt-auto pt-sm">
+<a class="inline-flex items-center gap-xs font-label-md text-label-md text-primary hover:text-on-primary-fixed-variant transition-colors" href="https://wa.me/6282122840930" rel="noopener noreferrer" target="_blank">
+                            Hubungi via WhatsApp <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+</div>
+</article>
+<!-- Card 6 -->
+<article class="bg-surface-container-lowest rounded-2xl overflow-hidden ambient-shadow flex flex-col group transition-transform duration-300 hover:-translate-y-1">
+<div class="h-64 relative overflow-hidden bg-surface-container-low p-2">
+<img alt="Informasi NASI PEDAS BAKMI JAWA KLITREN" class="object-contain w-full h-full group-hover:scale-105 transition-transform duration-500" src="../../thumbnail/UMKM_RW_13/umkm_6.png">
+</div>
+<div class="p-md flex flex-col gap-sm flex-grow">
+<h2 class="font-headline-md text-headline-md text-primary">NASI PEDAS BAKMI JAWA KLITREN</h2>
+<div class="flex items-start gap-base text-on-surface-variant font-body-md text-body-md">
+<span class="material-symbols-outlined text-outline mt-1 shrink-0" data-icon="location_on">location_on</span>
+<p class="">Jl. Mangga, Jl. Kepuh GK 3 No. 991b, Klitren</p>
+</div>
+<div class="flex items-start gap-base text-on-surface-variant font-body-md text-body-md">
+<span class="material-symbols-outlined text-outline mt-1 shrink-0" data-icon="person">person</span>
+<p class="">Kontak (0857-2962-0758)</p>
+</div>
+<div class="flex items-start gap-base text-on-surface-variant font-body-md text-body-md">
+<span class="material-symbols-outlined text-outline mt-1 shrink-0" data-icon="schedule">schedule</span>
+<p class="">Senin - Minggu, 08.00 - 23.00</p>
+</div>
+<div class="mt-auto pt-sm">
+<a class="inline-flex items-center gap-xs font-label-md text-label-md text-primary hover:text-on-primary-fixed-variant transition-colors" href="https://wa.me/6285729620758" rel="noopener noreferrer" target="_blank">
+                            Hubungi via WhatsApp <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+</div>
+</article>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest dark:bg-surface-container-low border-t border-outline-variant full-width mt-auto" data-site-footer>
+<div class="flex flex-col items-center text-center py-xl px-margin-mobile md:px-xl w-full">
+<a class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed mb-4" href="../../index.html">GO Klitren</a>
+<nav class="flex flex-wrap justify-center gap-gutter mb-6" aria-label="Navigasi footer">
+<a class="text-on-surface-variant dark:text-on-surface-variant font-label-sm text-label-sm hover:underline hover:text-secondary transition-all duration-200" href="../../index.html">Beranda</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant font-label-sm text-label-sm hover:underline hover:text-secondary transition-all duration-200" href="../rw-13.html">RW 13</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant font-label-sm text-label-sm hover:underline hover:text-secondary transition-all duration-200" href="../rw-16.html">RW 16</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant font-label-sm text-label-sm hover:underline hover:text-secondary transition-all duration-200" href="../programs.html">Program dan Materi</a>
+</nav>
+<div class="font-body-md text-body-md text-on-surface-variant">&copy; 2026 GO Klitren</div>
+</div>
+</footer>
+
+
+<script src="../../assets/js/site.js" defer></script>
+</body></html>

@@ -1,0 +1,390 @@
+<!DOCTYPE html><html class="light" lang="id" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Posyandu RW 16 - GO Klitren</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "secondary-fixed-dim": "#55d8e1",
+                      "on-background": "#171d19",
+                      "on-tertiary-container": "#ffffff",
+                      "surface-container-highest": "#dfe4de",
+                      "on-tertiary-fixed": "#410008",
+                      "primary-fixed-dim": "#76daa7",
+                      "primary-container": "#16875b",
+                      "on-secondary-fixed-variant": "#004f54",
+                      "inverse-on-surface": "#edf2ec",
+                      "on-error-container": "#93000a",
+                      "inverse-primary": "#76daa7",
+                      "on-primary-fixed": "#002112",
+                      "outline-variant": "#bdcac0",
+                      "surface-bright": "#f6fbf4",
+                      "outline": "#6e7a71",
+                      "on-primary-container": "#ffffff",
+                      "on-tertiary-fixed-variant": "#7c2b2e",
+                      "on-primary": "#ffffff",
+                      "tertiary-fixed": "#ffdad8",
+                      "secondary": "#00696f",
+                      "primary": "#006c46",
+                      "surface-container-lowest": "#ffffff",
+                      "on-secondary-container": "#006e74",
+                      "error-container": "#ffdad6",
+                      "on-tertiary": "#ffffff",
+                      "surface-container-low": "#f0f5ef",
+                      "on-error": "#ffffff",
+                      "surface": "#f6fbf4",
+                      "surface-variant": "#dfe4de",
+                      "surface-tint": "#006c47",
+                      "inverse-surface": "#2c322e",
+                      "tertiary": "#9a4143",
+                      "surface-container-high": "#e4eae3",
+                      "on-surface-variant": "#3e4942",
+                      "on-secondary": "#ffffff",
+                      "on-surface": "#171d19",
+                      "on-secondary-fixed": "#002022",
+                      "tertiary-fixed-dim": "#ffb3b1",
+                      "error": "#ba1a1a",
+                      "surface-dim": "#d6dbd5",
+                      "background": "#f6fbf4",
+                      "secondary-container": "#72f2fb",
+                      "tertiary-container": "#b9595a",
+                      "secondary-fixed": "#76f5fe",
+                      "primary-fixed": "#92f7c2",
+                      "on-primary-fixed-variant": "#005234",
+                      "surface-container": "#eaefe9"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "sm": "12px",
+                      "lg": "40px",
+                      "xs": "4px",
+                      "xl": "64px",
+                      "container-max": "1200px",
+                      "margin-mobile": "16px",
+                      "gutter": "24px",
+                      "md": "24px",
+                      "base": "8px"
+              },
+              "fontFamily": {
+                      "headline-md": [
+                              "Inter"
+                      ],
+                      "headline-lg-mobile": [
+                              "Inter"
+                      ],
+                      "body-md": [
+                              "Inter"
+                      ],
+                      "label-md": [
+                              "Inter"
+                      ],
+                      "label-sm": [
+                              "Inter"
+                      ],
+                      "headline-xl": [
+                              "Inter"
+                      ],
+                      "body-lg": [
+                              "Inter"
+                      ],
+                      "headline-lg": [
+                              "Inter"
+                      ]
+              },
+              "fontSize": {
+                      "headline-md": [
+                              "24px",
+                              {
+                                      "lineHeight": "32px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-lg-mobile": [
+                              "28px",
+                              {
+                                      "lineHeight": "36px",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-md": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "letterSpacing": "0.01em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "label-sm": [
+                              "12px",
+                              {
+                                      "lineHeight": "16px",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "headline-xl": [
+                              "48px",
+                              {
+                                      "lineHeight": "56px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "800"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-lg": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "700"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f6fbf4; /* background */
+            color: #171d19; /* on-background */
+        }
+        
+        /* Ambient Shadows */
+        .shadow-level-1 {
+            box-shadow: 0 4px 20px rgba(0, 108, 70, 0.1);
+        }
+        .shadow-level-2 {
+            box-shadow: 0 8px 30px rgba(0, 108, 70, 0.15);
+        }
+        
+        /* TopNavBar Specific Layout Adjustments */
+        .top-nav-docked {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="antialiased min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<header class="bg-surface dark:bg-surface-container-high docked full-width top-0 shadow-sm sticky z-50" data-site-header>
+<div class="flex justify-between items-center px-margin-mobile md:px-xl py-base w-full max-w-container-max mx-auto">
+<a class="font-headline-md text-headline-md font-extrabold text-primary dark:text-primary-fixed" href="../../index.html">GO Klitren</a>
+<nav class="hidden md:flex gap-gutter" aria-label="Navigasi utama">
+<a class="text-on-surface-variant dark:text-on-surface-variant font-label-md text-label-md hover:text-primary dark:hover:text-primary-fixed transition-colors" href="../../index.html">Beranda</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant font-label-md text-label-md hover:text-primary dark:hover:text-primary-fixed transition-colors" href="../rw-13.html">RW 13</a>
+<a class="text-primary dark:text-primary-fixed font-bold border-b-2 border-primary font-label-md text-label-md" href="../rw-16.html">RW 16</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant font-label-md text-label-md hover:text-primary dark:hover:text-primary-fixed transition-colors" href="../programs.html">Program dan Materi</a>
+</nav>
+<button class="bg-primary hover:bg-primary-container text-on-primary font-label-md text-label-md py-2 px-4 rounded-lg transition-colors hidden md:block" type="button">
+                Hubungi Kami
+            </button>
+<button aria-label="Menu" class="md:hidden text-primary" type="button">
+<span class="material-symbols-outlined" aria-hidden="true">menu</span>
+</button>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-grow w-full max-w-container-max mx-auto px-margin-mobile md:px-gutter py-xl flex flex-col gap-xl">
+<!-- Breadcrumb -->
+<nav aria-label="Breadcrumb" class="w-full">
+<ol class="flex items-center space-x-2 font-label-sm text-label-sm text-on-surface-variant">
+<li class=""><a class="hover:text-primary hover:underline transition-colors" href="../../index.html">Beranda</a></li>
+<li class=""><span class="material-symbols-outlined text-[14px]">chevron_right</span></li>
+<li class=""><a class="hover:text-primary hover:underline transition-colors" href="../rw-16.html">RW 16</a></li>
+<li class=""><span class="material-symbols-outlined text-[14px]">chevron_right</span></li>
+<li class=""><a class="hover:text-primary hover:underline transition-colors" href="../rw-16.html">Kegiatan Warga</a></li>
+<li class=""><span class="material-symbols-outlined text-[14px]">chevron_right</span></li>
+<li aria-current="page" class="text-primary font-semibold">Posyandu</li>
+</ol>
+</nav>
+<!-- Section 1: Hero -->
+<section class="flex flex-col md:flex-row gap-lg items-center bg-surface-container-lowest rounded-2xl shadow-level-1 overflow-hidden">
+<div class="w-full md:w-1/2 h-64 md:h-[400px]">
+<img alt="Kegiatan Posyandu" class="w-full h-full object-cover object-center" data-alt="A professional, bright, and heartwarming photograph of a community health activity (Posyandu) in Indonesia. Healthcare volunteers in neat uniforms are interacting cheerfully with a mother and her toddler in a clean, sunlit community hall. The color palette emphasizes modern organic tones with touches of vibrant lush community green. The overall mood is optimistic, welcoming, and community-focused." src="../../assets/images/activities/rw-16-posyandu/cover.jpg">
+</div>
+<div class="w-full md:w-1/2 p-md md:p-lg flex flex-col justify-center">
+<div class="inline-flex items-center gap-2 mb-4 bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full font-label-sm text-label-sm w-max">
+<span class="material-symbols-outlined text-[16px]">health_and_safety</span>
+                    Kesehatan Masyarakat
+                </div>
+<h1 class="font-headline-xl text-headline-xl text-on-surface mb-4">
+                    Posyandu RW 16
+                </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+                    Program kesehatan masyarakat untuk memantau tumbuh kembang anak, kesehatan ibu, dan lansia secara rutin di wilayah RW 16.
+                </p>
+</div>
+</section>
+<!-- Section 2: Content Grid -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Left Column: Tentang -->
+<div class="md:col-span-2 space-y-6">
+<h2 class="font-headline-md text-headline-md text-on-surface">Tentang Posyandu</h2>
+<div class="prose prose-lg max-w-none text-on-surface-variant font-body-md text-body-md leading-relaxed space-y-4">
+<p class="">
+                        Posyandu (Pos Pelayanan Terpadu) RW 16 merupakan ujung tombak pelayanan kesehatan dasar bagi warga, yang dikelola dari, oleh, untuk, dan bersama masyarakat dengan dukungan dari tenaga kesehatan Puskesmas setempat.
+                    </p>
+<p class="">
+                        Kegiatan ini bertujuan untuk mempercepat penurunan angka kematian ibu dan bayi, meningkatkan pelayanan kesehatan dasar, serta menjadi sarana edukasi kesehatan bagi warga. Melalui pemantauan rutin, kami berupaya menciptakan generasi yang sehat, kuat, dan lingkungan masyarakat yang peduli akan pentingnya kesehatan preventif.
+                    </p>
+</div>
+</div>
+<!-- Right Column: Informasi Kegiatan Card -->
+<div class="md:col-span-1">
+<div class="bg-surface-container-lowest rounded-2xl shadow-level-1 p-md flex flex-col gap-4 sticky top-[100px]">
+<h3 class="font-headline-md text-headline-md text-on-surface border-b border-outline-variant pb-2">
+                        Informasi Kegiatan
+                    </h3>
+<ul class="space-y-sm">
+<li class="flex items-start gap-3">
+<div class="bg-primary-container text-on-primary-container p-2 rounded-lg shrink-0 flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]" data-weight="fill">calendar_month</span>
+</div>
+<div>
+<span class="block font-label-sm text-label-sm text-outline">Jadwal</span>
+<span class="block font-body-md text-body-md text-on-surface font-medium">Belum diisi</span>
+</div>
+</li>
+<li class="flex items-start gap-3">
+<div class="bg-primary-container text-on-primary-container p-2 rounded-lg shrink-0 flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]" data-weight="fill">location_on</span>
+</div>
+<div>
+<span class="block font-label-sm text-label-sm text-outline">Lokasi</span>
+<span class="block font-body-md text-body-md text-on-surface font-medium">Belum diisi</span>
+</div>
+</li>
+<li class="flex items-start gap-3">
+<div class="bg-primary-container text-on-primary-container p-2 rounded-lg shrink-0 flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]" data-weight="fill">groups</span>
+</div>
+<div>
+<span class="block font-label-sm text-label-sm text-outline">Peserta</span>
+<span class="block font-body-md text-body-md text-on-surface font-medium">Belum diisi</span>
+</div>
+</li>
+<li class="flex items-start gap-3">
+<div class="bg-primary-container text-on-primary-container p-2 rounded-lg shrink-0 flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]" data-weight="fill">person</span>
+</div>
+<div>
+<span class="block font-label-sm text-label-sm text-outline">Penanggung Jawab</span>
+<span class="block font-body-md text-body-md text-on-surface font-medium">Belum diisi</span>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</section>
+<!-- Section 3: Kegiatan Utama -->
+<section class="flex flex-col gap-lg">
+<div class="text-center md:text-left">
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface mb-2">Kegiatan Utama</h2>
+
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Card 1 -->
+<div class="bg-surface-container-lowest rounded-2xl shadow-level-1 p-md hover:shadow-level-2 transition-shadow duration-300 flex flex-col gap-3 group border border-transparent hover:border-primary/20">
+<div class="w-12 h-12 rounded-xl bg-secondary-container text-on-secondary-container flex items-center justify-center mb-2 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[24px]">scale</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Penimbangan &amp; Pengukuran</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                        Pemantauan berat badan dan tinggi badan balita secara berkala untuk memastikan kurva pertumbuhan ideal.
+                    </p>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-lowest rounded-2xl shadow-level-1 p-md hover:shadow-level-2 transition-shadow duration-300 flex flex-col gap-3 group border border-transparent hover:border-primary/20">
+<div class="w-12 h-12 rounded-xl bg-secondary-container text-on-secondary-container flex items-center justify-center mb-2 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[24px]">vaccines</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Imunisasi &amp; Vitamin</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                        Pemberian vaksin dasar dan vitamin untuk meningkatkan daya tahan tubuh anak dari berbagai penyakit.
+                    </p>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container-lowest rounded-2xl shadow-level-1 p-md hover:shadow-level-2 transition-shadow duration-300 flex flex-col gap-3 group border border-transparent hover:border-primary/20">
+<div class="w-12 h-12 rounded-xl bg-secondary-container text-on-secondary-container flex items-center justify-center mb-2 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[24px]">forum</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Konsultasi Kesehatan</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                        Layanan penyuluhan gizi dan kesehatan bagi ibu dan anak bersama kader dan tenaga kesehatan.
+                    </p>
+</div>
+</div>
+</section>
+<!-- Section 4: Galeri Kegiatan -->
+<section class="flex flex-col gap-lg pb-xl">
+<div class="flex justify-between items-end mb-4">
+<div>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface">Galeri Kegiatan</h2>
+
+</div>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-sm md:gap-gutter">
+<div class="aspect-square rounded-2xl overflow-hidden shadow-level-1 group cursor-pointer relative">
+<div class="absolute inset-0 bg-primary/0 group-hover:bg-primary/20 transition-colors z-10"></div>
+<img alt="Penimbangan Balita" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A brightly lit photo showing a baby being weighed on a traditional yet modern scale in an Indonesian community hall. The scene is full of natural light, showcasing clean white walls and subtle lush green accents in the decor. Volunteers in neat attire are smiling, exuding a modern organic and neighborly warmth aesthetic." src="../../assets/images/activities/rw-16-posyandu/gallery-01-penimbangan-balita.jpg">
+</div>
+<div class="aspect-square rounded-2xl overflow-hidden shadow-level-1 group cursor-pointer relative">
+<div class="absolute inset-0 bg-primary/0 group-hover:bg-primary/20 transition-colors z-10"></div>
+<img alt="Pemberian Vitamin" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A cheerful Indonesian healthcare volunteer giving vitamin drops to a toddler. The setting is a clean, modern community space with soft cream backgrounds and vibrant sunlight streaming in. The mood is optimistic and caring, reflecting a professional yet highly approachable community health service." src="../../assets/images/activities/rw-16-posyandu/gallery-02-pemberian-vitamin.jpg">
+</div>
+<div class="aspect-square rounded-2xl overflow-hidden shadow-level-1 group cursor-pointer relative">
+<div class="absolute inset-0 bg-primary/0 group-hover:bg-primary/20 transition-colors z-10"></div>
+<img alt="Posyandu Lansia" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A group of elderly residents (lansia) participating in a mild group exercise or health check in a bright, airy community center in Indonesia. The environment feels breathable with generous whitespace around the subjects. The image captures a sense of energetic growth and neighborly connection, styled with a modern, clean aesthetic." src="../../assets/images/activities/rw-16-posyandu/gallery-03-posyandu-lansia.jpg">
+</div>
+<div class="aspect-square rounded-2xl overflow-hidden shadow-level-1 group cursor-pointer relative">
+<div class="absolute inset-0 bg-primary/0 group-hover:bg-primary/20 transition-colors z-10"></div>
+<img alt="Pemberian Makanan Tambahan" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A close-up, high-quality shot of community health records (Buku KIA) and fresh nutritional snacks (PMT) arranged neatly on a clean white table. The lighting is soft and diffused, creating ambient depth. The scene represents structured community organization with a modern organic feel, using crisp whites and lush green accents." src="../../assets/images/activities/rw-16-posyandu/gallery-04-makanan-tambahan.jpg">
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest dark:bg-surface-container-low border-t border-outline-variant full-width mt-auto" data-site-footer>
+<div class="flex flex-col items-center text-center py-xl px-margin-mobile md:px-xl w-full">
+<a class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed mb-4" href="../../index.html">GO Klitren</a>
+<nav class="flex flex-wrap justify-center gap-gutter mb-6" aria-label="Navigasi footer">
+<a class="text-on-surface-variant dark:text-on-surface-variant font-label-sm text-label-sm hover:underline hover:text-secondary transition-all duration-200" href="../../index.html">Beranda</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant font-label-sm text-label-sm hover:underline hover:text-secondary transition-all duration-200" href="../rw-13.html">RW 13</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant font-label-sm text-label-sm hover:underline hover:text-secondary transition-all duration-200" href="../rw-16.html">RW 16</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant font-label-sm text-label-sm hover:underline hover:text-secondary transition-all duration-200" href="../programs.html">Program dan Materi</a>
+</nav>
+<div class="font-body-md text-body-md text-on-surface-variant">&copy; 2026 GO Klitren</div>
+</div>
+</footer>
+
+
+<script src="../../assets/js/site.js" defer></script>
+</body></html>

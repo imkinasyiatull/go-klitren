@@ -1,0 +1,353 @@
+<!DOCTYPE html><html class="light" lang="id" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Kelompok Tani RW 16 - GO Klitren</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+                "on-primary-container": "#ffffff",
+                "surface-container-high": "#e4eae3",
+                "on-secondary-fixed": "#002022",
+                "tertiary-fixed-dim": "#ffb3b1",
+                "secondary": "#00696f",
+                "primary": "#006c46",
+                "surface-dim": "#d6dbd5",
+                "on-primary": "#ffffff",
+                "primary-container": "#16875b",
+                "inverse-on-surface": "#edf2ec",
+                "surface-container": "#eaefe9",
+                "secondary-container": "#72f2fb",
+                "tertiary": "#9a4143",
+                "on-secondary": "#ffffff",
+                "surface": "#f6fbf4",
+                "on-error-container": "#93000a",
+                "surface-variant": "#dfe4de",
+                "tertiary-fixed": "#ffdad8",
+                "on-background": "#171d19",
+                "inverse-primary": "#76daa7",
+                "surface-tint": "#006c47",
+                "surface-container-low": "#f0f5ef",
+                "primary-fixed-dim": "#76daa7",
+                "surface-container-highest": "#dfe4de",
+                "inverse-surface": "#2c322e",
+                "surface-container-lowest": "#ffffff",
+                "secondary-fixed-dim": "#55d8e1",
+                "outline": "#6e7a71",
+                "on-tertiary": "#ffffff",
+                "on-surface-variant": "#3e4942",
+                "on-error": "#ffffff",
+                "on-primary-fixed-variant": "#005234",
+                "on-primary-fixed": "#002112",
+                "on-surface": "#171d19",
+                "outline-variant": "#bdcac0",
+                "on-secondary-container": "#006e74",
+                "error": "#ba1a1a",
+                "secondary-fixed": "#76f5fe",
+                "tertiary-container": "#b9595a",
+                "background": "#f6fbf4",
+                "on-tertiary-fixed": "#410008",
+                "surface-bright": "#f6fbf4",
+                "primary-fixed": "#92f7c2",
+                "on-secondary-fixed-variant": "#004f54",
+                "on-tertiary-container": "#ffffff",
+                "error-container": "#ffdad6",
+                "on-tertiary-fixed-variant": "#7c2b2e"
+        },
+        "borderRadius": {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
+        },
+        "spacing": {
+                "container-max": "1200px",
+                "md": "24px",
+                "xs": "4px",
+                "xl": "64px",
+                "margin-mobile": "16px",
+                "base": "8px",
+                "lg": "40px",
+                "gutter": "24px",
+                "sm": "12px"
+        },
+        "fontFamily": {
+                "label-md": [
+                        "Inter"
+                ],
+                "body-lg": [
+                        "Inter"
+                ],
+                "headline-md": [
+                        "Inter"
+                ],
+                "headline-lg-mobile": [
+                        "Inter"
+                ],
+                "label-sm": [
+                        "Inter"
+                ],
+                "headline-xl": [
+                        "Inter"
+                ],
+                "headline-lg": [
+                        "Inter"
+                ],
+                "body-md": [
+                        "Inter"
+                ]
+        },
+        "fontSize": {
+                "label-md": [
+                        "14px",
+                        {
+                                "lineHeight": "20px",
+                                "letterSpacing": "0.01em",
+                                "fontWeight": "600"
+                        }
+                ],
+                "body-lg": [
+                        "18px",
+                        {
+                                "lineHeight": "28px",
+                                "fontWeight": "400"
+                        }
+                ],
+                "headline-md": [
+                        "24px",
+                        {
+                                "lineHeight": "32px",
+                                "fontWeight": "600"
+                        }
+                ],
+                "headline-lg-mobile": [
+                        "28px",
+                        {
+                                "lineHeight": "36px",
+                                "fontWeight": "700"
+                        }
+                ],
+                "label-sm": [
+                        "12px",
+                        {
+                                "lineHeight": "16px",
+                                "fontWeight": "500"
+                        }
+                ],
+                "headline-xl": [
+                        "48px",
+                        {
+                                "lineHeight": "56px",
+                                "letterSpacing": "-0.02em",
+                                "fontWeight": "800"
+                        }
+                ],
+                "headline-lg": [
+                        "32px",
+                        {
+                                "lineHeight": "40px",
+                                "letterSpacing": "-0.01em",
+                                "fontWeight": "700"
+                        }
+                ],
+                "body-md": [
+                        "16px",
+                        {
+                                "lineHeight": "24px",
+                                "fontWeight": "400"
+                        }
+                ]
+        }
+},
+    },
+  }
+</script>
+<style>
+        .shadow-ambient {
+            box-shadow: 0 4px 20px rgba(0, 108, 70, 0.1);
+        }
+        .shadow-ambient-elevated {
+            box-shadow: 0 8px 30px rgba(0, 108, 70, 0.15);
+        }
+      </style>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col">
+<!-- Top Navigation -->
+<header class="bg-surface dark:bg-surface-container-high docked full-width top-0 shadow-sm sticky z-50" data-site-header>
+<div class="flex justify-between items-center px-margin-mobile md:px-xl py-base w-full max-w-container-max mx-auto">
+<a class="font-headline-md text-headline-md font-extrabold text-primary dark:text-primary-fixed" href="../../index.html">GO Klitren</a>
+<nav class="hidden md:flex gap-gutter" aria-label="Navigasi utama">
+<a class="text-on-surface-variant dark:text-on-surface-variant font-label-md text-label-md hover:text-primary dark:hover:text-primary-fixed transition-colors" href="../../index.html">Beranda</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant font-label-md text-label-md hover:text-primary dark:hover:text-primary-fixed transition-colors" href="../rw-13.html">RW 13</a>
+<a class="text-primary dark:text-primary-fixed font-bold border-b-2 border-primary font-label-md text-label-md" href="../rw-16.html">RW 16</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant font-label-md text-label-md hover:text-primary dark:hover:text-primary-fixed transition-colors" href="../programs.html">Program dan Materi</a>
+</nav>
+<button class="bg-primary hover:bg-primary-container text-on-primary font-label-md text-label-md py-2 px-4 rounded-lg transition-colors hidden md:block" type="button">
+                Hubungi Kami
+            </button>
+<button aria-label="Menu" class="md:hidden text-primary" type="button">
+<span class="material-symbols-outlined" aria-hidden="true">menu</span>
+</button>
+</div>
+</header>
+<main class="flex-grow w-full max-w-container-max mx-auto px-margin-mobile md:px-gutter py-md">
+<!-- Breadcrumb -->
+<nav aria-label="Breadcrumb" class="flex text-sm text-on-surface-variant mb-md font-label-sm text-label-sm">
+<ol class="inline-flex items-center space-x-1 md:space-x-3">
+<li class="inline-flex items-center">
+<a class="inline-flex items-center hover:text-primary transition-colors" href="../../index.html">Beranda</a>
+</li>
+<li class="">
+<div class="flex items-center">
+<span class="material-symbols-outlined text-sm mx-1">chevron_right</span>
+<a class="hover:text-primary transition-colors" href="../rw-16.html">RW 16</a>
+</div>
+</li>
+<li class="">
+<div class="flex items-center">
+<span class="material-symbols-outlined text-sm mx-1">chevron_right</span>
+<span class="hover:text-primary transition-colors">Kegiatan Warga</span>
+</div>
+</li>
+<li aria-current="page" class="">
+<div class="flex items-center">
+<span class="material-symbols-outlined text-sm mx-1">chevron_right</span>
+<span class="text-primary font-medium">Kelompok Tani</span>
+</div>
+</li>
+</ol>
+</nav>
+<!-- Header Section -->
+<section class="mb-xl flex flex-col lg:flex-row gap-md items-start">
+<div class="w-full lg:w-1/2 flex flex-col justify-center">
+<span class="inline-block bg-tertiary-container text-on-tertiary-container font-label-sm text-label-sm px-3 py-1 rounded-full mb-4 w-max">Kegiatan Warga RW 16</span>
+<h1 class="font-headline-xl text-headline-xl text-on-surface mb-4">Kelompok Tani RW 16</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-6">
+                    Inisiatif warga RW 16 dalam mengelola pertanian perkotaan dan penghijauan lingkungan untuk mendukung ketahanan pangan lokal.
+                </p>
+<a class="inline-flex items-center justify-center bg-surface-container-high hover:bg-surface-container-highest text-primary font-label-md text-label-md py-3 px-6 rounded-lg transition-colors border border-outline-variant w-max" href="../rw-16.html">
+<span class="material-symbols-outlined mr-2 text-sm">arrow_back</span>
+                    Kembali ke RW 16
+                </a>
+</div>
+<div class="w-full lg:w-1/2">
+<div class="rounded-2xl overflow-hidden shadow-ambient h-[300px] lg:h-[400px]">
+<img alt="Kelompok Tani RW 16 Cover" class="w-full h-full object-cover" data-alt="A lush community garden with raised beds full of fresh vegetables." src="../../assets/images/activities/rw-16-kelompok-tani/cover.jpeg">
+</div>
+</div>
+</section>
+<!-- Tentang Kegiatan & Informasi Grid -->
+<section class="grid grid-cols-1 lg:grid-cols-3 gap-gutter mb-xl">
+<!-- Tentang Kelompok Tani -->
+<div class="lg:col-span-2 bg-surface-container-lowest rounded-2xl p-md shadow-ambient">
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-4 border-b-2 border-primary-fixed-dim inline-block pb-2">Tentang Kelompok Tani</h2>
+<div class="font-body-md text-body-md text-on-surface-variant space-y-4">
+<p class="">Kelompok Tani RW 16 merupakan inisiatif warga dalam mengelola pertanian perkotaan dan penghijauan lingkungan. Kami berdedikasi untuk menciptakan lingkungan yang lebih hijau dan produktif.</p>
+<p class="">Melalui kegiatan urban farming ini, kami berharap dapat mendukung ketahanan pangan lokal, mengedukasi warga tentang pentingnya pertanian berkelanjutan, dan mempererat tali silaturahmi antar warga.</p>
+<p class="">Kami memanfaatkan lahan untuk ditanami berbagai jenis sayuran, buah-buahan, dan tanaman obat keluarga, mengubah lahan tidur menjadi lahan produktif.</p>
+</div>
+</div>
+<!-- Informasi Kegiatan Card -->
+<div class="lg:col-span-1 bg-surface-container-lowest rounded-2xl p-md shadow-ambient border border-outline-variant">
+<h3 class="font-headline-md text-headline-md text-primary mb-6">Informasi Kegiatan</h3>
+<ul class="space-y-sm">
+<li class="flex items-start">
+<span class="material-symbols-outlined text-secondary mr-3 mt-1">event</span>
+<div>
+<span class="block font-label-sm text-label-sm text-on-surface-variant">Jadwal</span>
+<span class="block font-body-md text-body-md text-on-surface font-medium">Belum diisi</span>
+</div>
+</li>
+<li class="flex items-start">
+<span class="material-symbols-outlined text-secondary mr-3 mt-1">location_on</span>
+<div>
+<span class="block font-label-sm text-label-sm text-on-surface-variant">Lokasi</span>
+<span class="block font-body-md text-body-md text-on-surface font-medium">Belum diisi</span>
+</div>
+</li>
+<li class="flex items-start">
+<span class="material-symbols-outlined text-secondary mr-3 mt-1">group</span>
+<div>
+<span class="block font-label-sm text-label-sm text-on-surface-variant">Peserta</span>
+<span class="block font-body-md text-body-md text-on-surface font-medium">Belum diisi</span>
+</div>
+</li>
+<li class="flex items-start">
+<span class="material-symbols-outlined text-secondary mr-3 mt-1">person</span>
+<div>
+<span class="block font-label-sm text-label-sm text-on-surface-variant">Penanggung Jawab</span>
+<span class="block font-body-md text-body-md text-on-surface font-medium">Belum diisi</span>
+</div>
+</li>
+</ul>
+</div>
+</section>
+<!-- Kegiatan Utama (Bento Grid Style) -->
+<section class="mb-xl">
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-center text-primary mb-8">Kegiatan Utama</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<div class="bg-surface-container-lowest rounded-2xl p-md shadow-ambient hover:shadow-ambient-elevated transition-shadow duration-300 border-t-4 border-secondary-fixed">
+<div class="w-12 h-12 bg-secondary-container text-on-secondary-container rounded-full flex items-center justify-center mb-4">
+<span class="material-symbols-outlined" data-weight="fill">local_florist</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2">Penanaman Rutin</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Kegiatan menanam berbagai jenis sayuran dan tanaman obat keluarga.</p>
+</div>
+<div class="bg-surface-container-lowest rounded-2xl p-md shadow-ambient hover:shadow-ambient-elevated transition-shadow duration-300 border-t-4 border-primary-fixed">
+<div class="w-12 h-12 bg-primary-fixed text-on-primary-fixed rounded-full flex items-center justify-center mb-4">
+<span class="material-symbols-outlined" data-weight="fill">eco</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2">Pengolahan Kompos</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Pelatihan dan praktik pembuatan pupuk organik dari sampah daun dan limbah dapur.</p>
+</div>
+<div class="bg-surface-container-lowest rounded-2xl p-md shadow-ambient hover:shadow-ambient-elevated transition-shadow duration-300 border-t-4 border-tertiary-fixed-dim">
+<div class="w-12 h-12 bg-tertiary-fixed text-on-tertiary-fixed rounded-full flex items-center justify-center mb-4">
+<span class="material-symbols-outlined" data-weight="fill">agriculture</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2">Panen Bersama</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Momen kebersamaan memanen hasil bumi yang telah dirawat bersama-sama oleh warga.</p>
+</div>
+</div>
+</section>
+<!-- Galeri Kegiatan -->
+<section class="mb-xl">
+<div class="flex justify-between items-end mb-6"><h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary">Galeri Kegiatan</h2></div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+<div class="aspect-square rounded-2xl overflow-hidden shadow-ambient">
+<img alt="Galeri 1" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" data-alt="Community members planting seedlings." src="../../assets/images/activities/rw-16-kelompok-tani/gallery-01-penanaman-bibit.jpeg">
+</div>
+<div class="aspect-square rounded-2xl overflow-hidden shadow-ambient">
+<img alt="Galeri 2" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" data-alt="A lush community garden." src="../../assets/images/activities/rw-16-kelompok-tani/gallery-02-kebun-warga.png">
+</div>
+<div class="aspect-square rounded-2xl overflow-hidden shadow-ambient">
+<img alt="Galeri 3" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" data-alt="Harvested vegetables." src="../../assets/images/activities/rw-16-kelompok-tani/gallery-03-hasil-panen.jpeg">
+</div>
+<div class="aspect-square rounded-2xl overflow-hidden shadow-ambient">
+<img alt="Galeri 4" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" data-alt="Community members interacting in the garden." src="../../assets/images/activities/rw-16-kelompok-tani/gallery-04-kegiatan-warga.jpeg">
+</div>
+</div>
+</section>
+<!-- Mari Berpartisipasi (Accent Block Style) -->
+<!-- Bottom Contextual Navigation -->
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest dark:bg-surface-container-low border-t border-outline-variant full-width mt-auto" data-site-footer>
+<div class="flex flex-col items-center text-center py-xl px-margin-mobile md:px-xl w-full">
+<a class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed mb-4" href="../../index.html">GO Klitren</a>
+<nav class="flex flex-wrap justify-center gap-gutter mb-6" aria-label="Navigasi footer">
+<a class="text-on-surface-variant dark:text-on-surface-variant font-label-sm text-label-sm hover:underline hover:text-secondary transition-all duration-200" href="../../index.html">Beranda</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant font-label-sm text-label-sm hover:underline hover:text-secondary transition-all duration-200" href="../rw-13.html">RW 13</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant font-label-sm text-label-sm hover:underline hover:text-secondary transition-all duration-200" href="../rw-16.html">RW 16</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant font-label-sm text-label-sm hover:underline hover:text-secondary transition-all duration-200" href="../programs.html">Program dan Materi</a>
+</nav>
+<div class="font-body-md text-body-md text-on-surface-variant">&copy; 2026 GO Klitren</div>
+</div>
+</footer>
+<script src="../../assets/js/site.js" defer></script>
+</body></html>

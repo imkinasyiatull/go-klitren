@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+
+<html lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Panduan Gizi Seimbang pada Anak - GO Klitren</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-tint": "#006c47",
+                      "primary-fixed-dim": "#76daa7",
+                      "on-secondary-fixed-variant": "#004f54",
+                      "tertiary-fixed": "#ffdad8",
+                      "surface": "#f6fbf4",
+                      "background": "#f6fbf4",
+                      "surface-bright": "#f6fbf4",
+                      "secondary-fixed": "#76f5fe",
+                      "on-secondary-container": "#006e74",
+                      "on-primary-container": "#ffffff",
+                      "on-secondary-fixed": "#002022",
+                      "secondary": "#00696f",
+                      "inverse-primary": "#76daa7",
+                      "error": "#ba1a1a",
+                      "primary-fixed": "#92f7c2",
+                      "on-tertiary-container": "#ffffff",
+                      "on-background": "#171d19",
+                      "on-tertiary": "#ffffff",
+                      "on-tertiary-fixed-variant": "#7c2b2e",
+                      "surface-container-lowest": "#ffffff",
+                      "surface-variant": "#dfe4de",
+                      "inverse-on-surface": "#edf2ec",
+                      "tertiary-container": "#b9595a",
+                      "tertiary": "#9a4143",
+                      "surface-container-high": "#e4eae3",
+                      "outline-variant": "#bdcac0",
+                      "on-primary": "#ffffff",
+                      "on-tertiary-fixed": "#410008",
+                      "primary": "#006c46",
+                      "secondary-fixed-dim": "#55d8e1",
+                      "on-error": "#ffffff",
+                      "on-primary-fixed-variant": "#005234",
+                      "tertiary-fixed-dim": "#ffb3b1",
+                      "inverse-surface": "#2c322e",
+                      "surface-container-highest": "#dfe4de",
+                      "on-surface-variant": "#3e4942",
+                      "surface-dim": "#d6dbd5",
+                      "on-surface": "#171d19",
+                      "primary-container": "#16875b",
+                      "on-secondary": "#ffffff",
+                      "secondary-container": "#72f2fb",
+                      "surface-container-low": "#f0f5ef",
+                      "error-container": "#ffdad6",
+                      "outline": "#6e7a71",
+                      "on-primary-fixed": "#002112",
+                      "on-error-container": "#93000a",
+                      "surface-container": "#eaefe9"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "md": "24px",
+                      "margin-mobile": "16px",
+                      "xl": "64px",
+                      "sm": "12px",
+                      "lg": "40px",
+                      "gutter": "24px",
+                      "xs": "4px",
+                      "container-max": "1200px",
+                      "base": "8px"
+              },
+              "fontFamily": {
+                      "headline-md": [
+                              "Inter"
+                      ],
+                      "label-sm": [
+                              "Inter"
+                      ],
+                      "headline-xl": [
+                              "Inter"
+                      ],
+                      "headline-lg": [
+                              "Inter"
+                      ],
+                      "body-md": [
+                              "Inter"
+                      ],
+                      "headline-lg-mobile": [
+                              "Inter"
+                      ],
+                      "body-lg": [
+                              "Inter"
+                      ],
+                      "label-md": [
+                              "Inter"
+                      ]
+              },
+              "fontSize": {
+                      "headline-md": [
+                              "24px",
+                              {
+                                      "lineHeight": "32px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "label-sm": [
+                              "12px",
+                              {
+                                      "lineHeight": "16px",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "headline-xl": [
+                              "48px",
+                              {
+                                      "lineHeight": "56px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "800"
+                              }
+                      ],
+                      "headline-lg": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-lg-mobile": [
+                              "28px",
+                              {
+                                      "lineHeight": "36px",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-md": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "letterSpacing": "0.01em",
+                                      "fontWeight": "600"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background antialiased min-h-screen flex flex-col font-body-md">
+<!-- TopNavBar -->
+<header class="bg-surface dark:bg-surface-container-high docked full-width top-0 shadow-sm sticky z-50" data-site-header>
+<div class="flex justify-between items-center px-margin-mobile md:px-xl py-base w-full max-w-container-max mx-auto">
+<a class="font-headline-md text-headline-md font-extrabold text-primary dark:text-primary-fixed" href="../../index.html">GO Klitren</a>
+<nav class="hidden md:flex gap-gutter" aria-label="Navigasi utama">
+<a class="text-on-surface-variant dark:text-on-surface-variant font-label-md text-label-md hover:text-primary dark:hover:text-primary-fixed transition-colors" href="../../index.html">Beranda</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant font-label-md text-label-md hover:text-primary dark:hover:text-primary-fixed transition-colors" href="../rw-13.html">RW 13</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant font-label-md text-label-md hover:text-primary dark:hover:text-primary-fixed transition-colors" href="../rw-16.html">RW 16</a>
+<a class="text-primary dark:text-primary-fixed font-bold border-b-2 border-primary font-label-md text-label-md" href="../programs.html">Program dan Materi</a>
+</nav>
+<button class="bg-primary hover:bg-primary-container text-on-primary font-label-md text-label-md py-2 px-4 rounded-lg transition-colors hidden md:block" type="button">
+                Hubungi Kami
+            </button>
+<button aria-label="Menu" class="md:hidden text-primary" type="button">
+<span class="material-symbols-outlined" aria-hidden="true">menu</span>
+</button>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-grow w-full max-w-container-max mx-auto px-margin-mobile md:px-md lg:px-xl py-xl flex flex-col gap-xl">
+<!-- Breadcrumb & Back Action -->
+<div class="flex flex-col gap-sm">
+<a class="flex items-center text-on-surface-variant hover:text-primary transition-colors w-fit font-label-md" href="../programs.html">
+<span class="material-symbols-outlined text-[20px] mr-xs" data-icon="arrow_back">arrow_back</span>
+                Kembali ke Program dan Materi
+            </a>
+<div class="flex items-center text-on-surface-variant font-label-sm gap-xs mt-sm">
+<a class="hover:text-primary transition-colors" href="../../index.html">Beranda</a>
+<span class="material-symbols-outlined text-[16px]" data-icon="chevron_right">chevron_right</span>
+<a class="hover:text-primary transition-colors" href="../programs.html">Program dan Materi</a>
+<span class="material-symbols-outlined text-[16px]" data-icon="chevron_right">chevron_right</span>
+<span class="text-primary font-medium">Panduan Gizi Seimbang pada Anak</span>
+</div>
+</div>
+<!-- Hero Detail Section (Bento Layout) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- Content Info -->
+<div class="lg:col-span-5 flex flex-col justify-center gap-md">
+<div class="flex items-center gap-sm">
+<span class="px-sm py-xs bg-tertiary-container/20 text-tertiary font-label-sm rounded-full flex items-center gap-xs border border-tertiary/20">
+<span class="material-symbols-outlined text-[16px]" data-icon="menu_book">menu_book</span>
+                        Leaflet
+                    </span>
+</div>
+<h1 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface">
+                    Panduan Gizi Seimbang pada Anak
+                </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+                    Leaflet ini berisi informasi mengenai konsep gizi seimbang pada anak dan prinsip Isi Piringku. Selain itu, dijelaskan pula pentingnya konsumsi makanan bergizi untuk mendukung tumbuh kembang anak secara sehat dan optimal sekaligus sebagai upaya pencegahan stunting. Leaflet ini juga membahas pentingnya asupan protein hewani dan nabati, serta dilengkapi dengan resep dimsum ayam daun bayam sebagai solusi bagi anak yang sulit makan sayur.
+                </p>
+<div class="flex flex-wrap gap-sm mt-sm">
+<a class="flex-1 md:flex-none flex items-center justify-center gap-sm px-lg py-sm bg-primary text-on-primary rounded-lg font-label-md hover:bg-primary/90 transition-all shadow-[0_4px_20px_rgba(0,108,70,0.2)] hover:shadow-[0_8px_30px_rgba(0,108,70,0.3)]" href="https://drive.google.com/file/d/1S0uA8JQ9uPx4y1z2Qj5TcweHUmNumrqs/view?usp=sharing" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined" data-icon="visibility">visibility</span>
+                        Lihat Leaflet
+                    </a>
+<a class="flex-1 md:flex-none flex items-center justify-center gap-sm px-lg py-sm bg-surface text-primary border-2 border-primary rounded-lg font-label-md hover:bg-surface-container-low transition-all" href="https://drive.google.com/file/d/1S0uA8JQ9uPx4y1z2Qj5TcweHUmNumrqs/view?usp=sharing" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined" data-icon="download">download</span>
+                        Unduh Materi
+                    </a>
+</div>
+</div>
+<!-- Thumbnail Preview -->
+<div class="lg:col-span-7 bg-surface-container-lowest rounded-2xl p-md shadow-[0_4px_20px_rgba(0,108,70,0.1)] border border-surface-variant/50 flex items-center justify-center min-h-[400px] overflow-hidden relative group">
+<img alt="Thumbnail panduan gizi seimbang pada anak" class="w-full h-full object-contain rounded-xl transition-transform duration-500 group-hover:scale-105" src="../../thumbnail/program/thumbnail_gizi_seimbang_anak.png"/>
+<div class="absolute inset-0 bg-primary/0 group-hover:bg-primary/10 transition-colors duration-300 rounded-xl flex items-center justify-center">
+<div class="opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-surface/90 backdrop-blur-sm p-sm rounded-full shadow-lg">
+<span class="material-symbols-outlined text-[32px] text-primary" data-icon="zoom_in">zoom_in</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Dokumentasi Section -->
+<section class="flex flex-col gap-lg mt-xl pt-xl border-t border-surface-variant/50">
+<div class="flex items-center justify-between">
+<h2 class="font-headline-md text-headline-md text-on-surface">Dokumentasi Kegiatan</h2>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-sm md:gap-md">
+<div class="aspect-square bg-surface-container-low rounded-xl overflow-hidden shadow-[0_4px_20px_rgba(0,108,70,0.05)] border border-surface-variant/30 group relative">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A detailed photograph showing a community health worker in a warm, welcoming environment distributing educational leaflets about child nutrition to a group of attentive mothers. The lighting is soft and natural, emphasizing a modern organic aesthetic with earthy tones and primary emerald accents. The mood is optimistic and neighborly." src="../../assets/images/programs/gizi-seimbang-anak/dokumentasi-01-pembagian-leaflet.png"/>
+</div>
+<div class="aspect-square bg-surface-container-low rounded-xl overflow-hidden shadow-[0_4px_20px_rgba(0,108,70,0.05)] border border-surface-variant/30 group relative">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A detailed close-up shot of a healthy meal preparation demonstration featuring chicken and spinach dimsum, illustrating a creative solution for children who are picky eaters. The setting is a clean, modern kitchen with warm lighting. The aesthetic uses generous whitespace and vibrant, fresh food colors against a clean white surface, reflecting a healthy, structured lifestyle." src="../../assets/images/programs/gizi-seimbang-anak/dokumentasi-02-praktik-dimsum-ayam-bayam.png"/>
+</div>
+<div class="aspect-square bg-surface-container-low rounded-xl overflow-hidden shadow-[0_4px_20px_rgba(0,108,70,0.05)] border border-surface-variant/30 group relative">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A high-quality photograph of children happily eating a balanced meal in a community center. The scene is bright and cheerful, characterized by a modern organic design style with soft ambient shadows. The colors are warm and inviting, using sunny yellow and emerald green accents to create a vibrant, energetic atmosphere focused on growth and health." src="../../assets/images/programs/gizi-seimbang-anak/dokumentasi-03-kegiatan-makan-anak.png"/>
+</div>
+<div class="aspect-square bg-surface-container-low rounded-xl overflow-hidden shadow-[0_4px_20px_rgba(0,108,70,0.05)] border border-surface-variant/30 group relative">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A detailed wide shot of an interactive educational session about the 'Isi Piringku' concept taking place in a modern community hall. The audience is engaged, and the presenter is using visual aids. The lighting is bright and high-key, creating a clean, systematic layout feel. The overall mood is approachable, clear, and community-focused." src="../../assets/images/programs/gizi-seimbang-anak/dokumentasi-04-edukasi-isi-piringku.png"/>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest dark:bg-surface-container-low border-t border-outline-variant full-width mt-auto" data-site-footer>
+<div class="flex flex-col items-center text-center py-xl px-margin-mobile md:px-xl w-full">
+<a class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed mb-4" href="../../index.html">GO Klitren</a>
+<nav class="flex flex-wrap justify-center gap-gutter mb-6" aria-label="Navigasi footer">
+<a class="text-on-surface-variant dark:text-on-surface-variant font-label-sm text-label-sm hover:underline hover:text-secondary transition-all duration-200" href="../../index.html">Beranda</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant font-label-sm text-label-sm hover:underline hover:text-secondary transition-all duration-200" href="../rw-13.html">RW 13</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant font-label-sm text-label-sm hover:underline hover:text-secondary transition-all duration-200" href="../rw-16.html">RW 16</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant font-label-sm text-label-sm hover:underline hover:text-secondary transition-all duration-200" href="../programs.html">Program dan Materi</a>
+</nav>
+<div class="font-body-md text-body-md text-on-surface-variant">&copy; 2026 GO Klitren</div>
+</div>
+</footer>
+<script src="../../assets/js/site.js" defer></script>
+</body></html>

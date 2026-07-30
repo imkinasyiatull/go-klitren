@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+
+<html lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Sistem Akuaponik Lele Menggunakan Galon - GO Klitren</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-family: 'Material Symbols Outlined';
+            font-weight: normal;
+            font-style: normal;
+            font-size: 24px;
+            line-height: 1;
+            letter-spacing: normal;
+            text-transform: none;
+            display: inline-block;
+            white-space: nowrap;
+            word-wrap: normal;
+            direction: ltr;
+            -webkit-font-feature-settings: 'liga';
+            -webkit-font-smoothing: antialiased;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-tint": "#006c47",
+                        "primary-fixed-dim": "#76daa7",
+                        "on-secondary-fixed-variant": "#004f54",
+                        "tertiary-fixed": "#ffdad8",
+                        "surface": "#f6fbf4",
+                        "background": "#f6fbf4",
+                        "surface-bright": "#f6fbf4",
+                        "secondary-fixed": "#76f5fe",
+                        "on-secondary-container": "#006e74",
+                        "on-primary-container": "#ffffff",
+                        "on-secondary-fixed": "#002022",
+                        "secondary": "#00696f",
+                        "inverse-primary": "#76daa7",
+                        "error": "#ba1a1a",
+                        "primary-fixed": "#92f7c2",
+                        "on-tertiary-container": "#ffffff",
+                        "on-background": "#171d19",
+                        "on-tertiary": "#ffffff",
+                        "on-tertiary-fixed-variant": "#7c2b2e",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-variant": "#dfe4de",
+                        "inverse-on-surface": "#edf2ec",
+                        "tertiary-container": "#b9595a",
+                        "tertiary": "#9a4143",
+                        "surface-container-high": "#e4eae3",
+                        "outline-variant": "#bdcac0",
+                        "on-primary": "#ffffff",
+                        "on-tertiary-fixed": "#410008",
+                        "primary": "#006c46",
+                        "secondary-fixed-dim": "#55d8e1",
+                        "on-error": "#ffffff",
+                        "on-primary-fixed-variant": "#005234",
+                        "tertiary-fixed-dim": "#ffb3b1",
+                        "inverse-surface": "#2c322e",
+                        "surface-container-highest": "#dfe4de",
+                        "on-surface-variant": "#3e4942",
+                        "surface-dim": "#d6dbd5",
+                        "on-surface": "#171d19",
+                        "primary-container": "#16875b",
+                        "on-secondary": "#ffffff",
+                        "secondary-container": "#72f2fb",
+                        "surface-container-low": "#f0f5ef",
+                        "error-container": "#ffdad6",
+                        "outline": "#6e7a71",
+                        "on-primary-fixed": "#002112",
+                        "on-error-container": "#93000a",
+                        "surface-container": "#eaefe9"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "1rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "md": "24px",
+                        "margin-mobile": "16px",
+                        "xl": "64px",
+                        "sm": "12px",
+                        "lg": "40px",
+                        "gutter": "24px",
+                        "xs": "4px",
+                        "container-max": "1200px",
+                        "base": "8px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Inter", "sans-serif"],
+                        "label-sm": ["Inter", "sans-serif"],
+                        "headline-xl": ["Inter", "sans-serif"],
+                        "headline-lg": ["Inter", "sans-serif"],
+                        "body-md": ["Inter", "sans-serif"],
+                        "headline-lg-mobile": ["Inter", "sans-serif"],
+                        "body-lg": ["Inter", "sans-serif"],
+                        "label-md": ["Inter", "sans-serif"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "label-sm": ["12px", { "lineHeight": "16px", "fontWeight": "500" }],
+                        "headline-xl": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "700" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background min-h-screen flex flex-col font-body-md antialiased">
+<!-- TopNavBar -->
+<header class="bg-surface dark:bg-surface-container-high docked full-width top-0 shadow-sm sticky z-50" data-site-header>
+<div class="flex justify-between items-center px-margin-mobile md:px-xl py-base w-full max-w-container-max mx-auto">
+<a class="font-headline-md text-headline-md font-extrabold text-primary dark:text-primary-fixed" href="../../index.html">GO Klitren</a>
+<nav class="hidden md:flex gap-gutter" aria-label="Navigasi utama">
+<a class="text-on-surface-variant dark:text-on-surface-variant font-label-md text-label-md hover:text-primary dark:hover:text-primary-fixed transition-colors" href="../../index.html">Beranda</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant font-label-md text-label-md hover:text-primary dark:hover:text-primary-fixed transition-colors" href="../rw-13.html">RW 13</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant font-label-md text-label-md hover:text-primary dark:hover:text-primary-fixed transition-colors" href="../rw-16.html">RW 16</a>
+<a class="text-primary dark:text-primary-fixed font-bold border-b-2 border-primary font-label-md text-label-md" href="../programs.html">Program dan Materi</a>
+</nav>
+<button class="bg-primary hover:bg-primary-container text-on-primary font-label-md text-label-md py-2 px-4 rounded-lg transition-colors hidden md:block" type="button">
+                Hubungi Kami
+            </button>
+<button aria-label="Menu" class="md:hidden text-primary" type="button">
+<span class="material-symbols-outlined" aria-hidden="true">menu</span>
+</button>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-grow w-full max-w-container-max mx-auto px-margin-mobile md:px-gutter py-xl">
+<!-- Breadcrumbs & Back Button -->
+<div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-lg gap-4">
+<nav class="flex items-center text-on-surface-variant font-label-sm text-label-sm space-x-2">
+<a class="hover:text-primary transition-colors" href="../../index.html">Beranda</a>
+<span class="material-symbols-outlined text-[16px]" data-icon="chevron_right">chevron_right</span>
+<a class="hover:text-primary transition-colors" href="../programs.html">Program dan Materi</a>
+<span class="material-symbols-outlined text-[16px]" data-icon="chevron_right">chevron_right</span>
+<span class="text-primary font-bold truncate max-w-[150px] md:max-w-xs" title="Sistem Akuaponik Lele Menggunakan Galon">Sistem Akuaponik Lele Menggunakan Galon</span>
+</nav>
+<a class="inline-flex items-center gap-2 text-primary font-label-md text-label-md hover:bg-surface-container-low px-4 py-2 rounded-lg transition-colors border border-outline-variant" href="../programs.html">
+<span class="material-symbols-outlined text-[20px]" data-icon="arrow_back">arrow_back</span>
+                Kembali ke Program dan Materi
+            </a>
+</div>
+<!-- Hero Section: Bento Layout -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-gutter mb-xl">
+<!-- Main Content Area -->
+<div class="lg:col-span-8 bg-surface-container-lowest rounded-2xl p-md md:p-lg shadow-[0_4px_20px_rgba(0,108,71,0.1)] border border-surface-variant relative overflow-hidden">
+<!-- Decorative Accent -->
+<div class="absolute top-0 right-0 w-32 h-32 bg-primary-fixed-dim/20 rounded-bl-full -z-0"></div>
+<div class="relative z-10 flex flex-col h-full justify-between">
+<div>
+<div class="flex items-center gap-3 mb-4">
+<span class="bg-[#FFF4D4] text-[#8C6D1F] px-3 py-1 rounded-full font-label-sm text-label-sm border border-[#FBE39A] inline-flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]" data-icon="menu_book" data-weight="fill">menu_book</span>
+                                Panduan
+                            </span>
+</div>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg text-on-background mb-4 leading-tight">
+                            Sistem Akuaponik Lele Menggunakan Galon dengan Tanaman Berakar Air dan Edukasi Pemeliharaan Sistem Akuaponik Lele Berkelanjutan
+                        </h1>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">
+                            Panduan pembuatan dan pemanfaatan galon bekas sebagai sistem akuaponik lele dengan tanaman berakar air yang memuat tahapan pembuatan, fungsi komponen, cara perawatan, serta edukasi pemeliharaan sistem secara berkelanjutan untuk mendukung ketahanan pangan dan pemanfaatan limbah secara optimal.
+                        </p>
+</div>
+<div class="flex flex-col sm:flex-row gap-4 mt-auto pt-6 border-t border-surface-variant">
+<a class="bg-primary text-on-primary font-label-md text-label-md px-6 py-3 rounded-lg hover:bg-primary-container hover:text-on-primary-container transition-colors shadow-sm flex-1 sm:flex-none inline-flex justify-center items-center gap-2" href="https://drive.google.com/file/d/1duCAy23Qusx6w9D7z2-rGZurLsPSOw5Q/view?usp=sharing" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined" data-icon="visibility">visibility</span>
+                            Lihat Panduan
+</a>
+<a class="bg-surface text-primary border-2 border-primary font-label-md text-label-md px-6 py-3 rounded-lg hover:bg-primary-fixed hover:text-on-primary-fixed transition-colors flex-1 sm:flex-none inline-flex justify-center items-center gap-2 text-center" href="https://drive.google.com/file/d/1duCAy23Qusx6w9D7z2-rGZurLsPSOw5Q/view?usp=sharing" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined" data-icon="download">download</span>
+                            Unduh Materi
+                        </a>
+</div>
+</div>
+</div>
+<!-- Thumbnail Sidebar -->
+<div class="lg:col-span-4 flex flex-col gap-gutter">
+<div class="bg-surface-container-lowest rounded-2xl overflow-hidden shadow-[0_4px_20px_rgba(0,108,71,0.1)] h-full flex flex-col">
+<div class="aspect-[4/3] bg-surface-container relative">
+<img alt="Thumbnail sistem akuaponik lele" class="object-contain w-full h-full absolute inset-0" src="../../thumbnail/program/thumbnail_sistem_akuaponik_lele.png"/>
+</div>
+<div class="p-md flex-grow flex flex-col justify-center bg-secondary/5 border-l-4 border-secondary">
+<h3 class="font-headline-md text-headline-md text-secondary mb-2">Informasi Utama</h3>
+<ul class="space-y-sm font-body-md text-body-md text-on-surface-variant">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-[20px] mt-1" data-icon="check_circle">check_circle</span>
+                                Memanfaatkan limbah galon bekas
+                            </li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-[20px] mt-1" data-icon="check_circle">check_circle</span>
+                                Mendukung ketahanan pangan keluarga
+                            </li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-[20px] mt-1" data-icon="check_circle">check_circle</span>
+                                Mudah dirawat dan berkelanjutan
+                            </li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- Section: Dokumentasi (Glassmorphism & Grid) -->
+<section class="mb-xl">
+<div class="flex items-center gap-4 mb-lg">
+<h2 class="font-headline-md text-headline-md text-on-background">Dokumentasi</h2>
+<div class="h-px bg-outline-variant flex-grow"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Image 1 -->
+<div class="group relative rounded-2xl overflow-hidden shadow-sm hover:shadow-[0_8px_30px_rgba(0,108,71,0.15)] transition-shadow duration-300 aspect-square">
+<img class="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105" data-alt="Close up realistic shot of hands carefully placing a small green seedling into the top section of a modified blue water gallon. The soil is dark and moist. Warm natural sunlight highlights the fresh green leaves, evoking a sense of care and modern organic gardening in an urban Indonesian setting." src="../../assets/images/programs/sistem-akuaponik-lele/dokumentasi-01-persiapan-galon.jpeg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-on-background/80 via-on-background/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+<p class="text-on-primary font-label-md text-label-md">Persiapan Galon</p>
+</div>
+</div>
+<!-- Image 2 -->
+<div class="group relative rounded-2xl overflow-hidden shadow-sm hover:shadow-[0_8px_30px_rgba(0,108,71,0.15)] transition-shadow duration-300 aspect-square">
+<img class="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105" data-alt="A realistic bright photo of a completed small-scale DIY aquaponics unit made from a recycled water gallon. The top part is flourishing with lush green water spinach (kangkung), and clear water is circulating. Set in a tidy, sunny backyard courtyard. The mood is optimistic and practical." src="../../assets/images/programs/sistem-akuaponik-lele/dokumentasi-02-sistem-berjalan.png"/>
+<div class="absolute inset-0 bg-gradient-to-t from-on-background/80 via-on-background/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+<p class="text-on-primary font-label-md text-label-md">Sistem Berjalan</p>
+</div>
+</div>
+<!-- Image 3 -->
+<div class="group relative rounded-2xl overflow-hidden shadow-sm hover:shadow-[0_8px_30px_rgba(0,108,71,0.15)] transition-shadow duration-300 aspect-square">
+<img class="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105" data-alt="A community gathering of smiling Indonesian adults and youths learning about urban farming. They are standing around a row of gallon aquaponics systems. Warm afternoon light, casual outdoor setting, focusing on community education, togetherness, and sustainable living." src="../../assets/images/programs/sistem-akuaponik-lele/dokumentasi-03-edukasi-warga.png"/>
+<div class="absolute inset-0 bg-gradient-to-t from-on-background/80 via-on-background/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+<p class="text-on-primary font-label-md text-label-md">Edukasi Warga</p>
+</div>
+</div>
+<!-- Image 4 -->
+<div class="group relative rounded-2xl overflow-hidden shadow-sm hover:shadow-[0_8px_30px_rgba(0,108,71,0.15)] transition-shadow duration-300 aspect-square">
+<img class="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105" data-alt="Close up realistic view of healthy, energetic small catfish swimming in clean, slightly green-tinted water inside the bottom half of a recycled blue gallon container. The lighting is clear and natural, showing successful sustainable fish rearing in a home environment." src="../../assets/images/programs/sistem-akuaponik-lele/dokumentasi-04-perkembangan-lele.png"/>
+<div class="absolute inset-0 bg-gradient-to-t from-on-background/80 via-on-background/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+<p class="text-on-primary font-label-md text-label-md">Perkembangan Lele</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest dark:bg-surface-container-low border-t border-outline-variant full-width mt-auto" data-site-footer>
+<div class="flex flex-col items-center text-center py-xl px-margin-mobile md:px-xl w-full">
+<a class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed mb-4" href="../../index.html">GO Klitren</a>
+<nav class="flex flex-wrap justify-center gap-gutter mb-6" aria-label="Navigasi footer">
+<a class="text-on-surface-variant dark:text-on-surface-variant font-label-sm text-label-sm hover:underline hover:text-secondary transition-all duration-200" href="../../index.html">Beranda</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant font-label-sm text-label-sm hover:underline hover:text-secondary transition-all duration-200" href="../rw-13.html">RW 13</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant font-label-sm text-label-sm hover:underline hover:text-secondary transition-all duration-200" href="../rw-16.html">RW 16</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant font-label-sm text-label-sm hover:underline hover:text-secondary transition-all duration-200" href="../programs.html">Program dan Materi</a>
+</nav>
+<div class="font-body-md text-body-md text-on-surface-variant">&copy; 2026 GO Klitren</div>
+</div>
+</footer>
+<script src="../../assets/js/site.js" defer></script>
+</body></html>
