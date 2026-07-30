@@ -1,0 +1,5 @@
+schedule:
+location:
+participants:
+coordinator:
+
